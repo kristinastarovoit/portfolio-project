@@ -1,29 +1,11 @@
-// fonts
-/* You can add global styles to this file, and also import other style files */
-
-
+@use 'app/styles/main.scss' as *;
 
 * {
     font-family: 'Bricolage Grotesque';
     margin: 0;
     box-sizing: border-box;
-    background-color: white;
 }
 
-h1,
-h3 {
-    font-weight: 700;
-}
-
-h1 {
-    font-size: 8rem;
-}
-
-h2 {
-    font-weight: 500;
-    font-size: 1.25rem;
-}
-
-h3 {
-    font-size: 4rem;
+body {
+    background-color: $white;
 }

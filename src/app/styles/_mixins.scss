@@ -1,0 +1,6 @@
+@mixin flex-center($f-d) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $f-d;
+}
