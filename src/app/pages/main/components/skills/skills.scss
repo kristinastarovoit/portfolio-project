@@ -1,0 +1,30 @@
+.skills {
+    display: flex;
+    gap: 48px;
+    background-image: url('/bg/skills.png');
+    background-size: cover;
+    background-position: center;
+
+    &__paragraph {
+        background-image: url('/sticker/skill_sticker.png');
+        background-size: cover;
+        background-position: center;
+        width: 660px;
+    }
+
+    &-content {
+        display: flex;
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        &__text {
+            font-size: 1.125rem;
+        }
+    }
+}

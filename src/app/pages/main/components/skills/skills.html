@@ -1,12 +1,10 @@
-<p>skills works!</p>
 <section class="skills">
     <div>
         <h2>MY STACK</h2>
         <h3>Skill set</h3>
     </div>
     <div>
-        <div>
-            <img>
+        <div class="skills__paragraph">
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Pariatur deserunt sit, quam dolores qui consequuntur impedit?
                 Aperiam corporis, laboriosam illum rerum voluptatem dolor,
@@ -14,11 +12,15 @@
             </p>
         </div>
         <div>
-            <img>
-            <img>
-            <img>
-            <img>
+            <div class="skills-content">
+                @for (skill of skills; track skill.name) {
+                <div class="skills-content__item">
+                    <img [src]="skill.img" [alt]="skill.name">
+                    <p class="text-white skills-content__text">{{ skill.name }}</p>
+                </div>
+                }
+            </div>
+            <p><img>Pull to peel</p>
         </div>
     </div>
-    <p><img>Pull to peel</p>
 </section>
