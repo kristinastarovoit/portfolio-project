@@ -43,7 +43,7 @@
         }
 
         &--about::after {
-            background-image: url('../../../../public/assets/nav/about_nav.svg');
+            background-image: url('/nav/about_nav.svg');
             top: 40%;
             left: 60%;
             clip-path: inset(0 0 100% 0);
@@ -51,16 +51,16 @@
         }
 
         &--skills::after {
-            background-image: url('../../../../public/assets/nav/skills_nav.svg');
+            background-image: url('/nav/skills_nav.svg');
             top: 50%;
         }
 
         &--projects::after {
-            background-image: url('../../../../public/assets/nav/projects_nav.svg');
+            background-image: url('/nav/projects_nav.svg');
         }
 
         &--contact::after {
-            background-image: url('../../../../public/assets/nav/contact_nav.svg');
+            background-image: url('/nav/contact_nav.svg');
         }
     }
 
