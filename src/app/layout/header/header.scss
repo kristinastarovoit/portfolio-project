@@ -28,73 +28,41 @@
         position: relative;
         padding-bottom: 8px;
 
-
-        &--about::after {
+        &::after {
             content: '';
-            background-image: url('../../../../public/assets/nav/about_nav.svg');
             background-size: contain;
             background-repeat: no-repeat;
             position: absolute;
-            top: 40%;
-            left: 60%;
             transform: translate(-50%, -50%);
             width: 150%;
             height: 150%;
+            top: 45%;
+            left: 50%;
+            clip-path: inset(0 100% 0 0);
+            transition: clip-path 0.4s ease-out;
+        }
+
+
+        &--about::after {
+            background-image: url('../../../../public/assets/nav/about_nav.svg');
+            top: 40%;
+            left: 60%;
             clip-path: inset(0 0 100% 0);
             transition: clip-path 0.8s cubic-bezier(0.25, 1, 0.5, 1);
-
         }
 
         &--skills::after {
-            content: '';
             background-image: url('../../../../public/assets/nav/skills_nav.svg');
-            background-size: contain;
-            background-repeat: no-repeat;
-            position: absolute;
             top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 150%;
-            height: 150%;
-
-            clip-path: inset(0 100% 0 0);
-            transition: clip-path 0.4s ease-out;
         }
 
-
         &--projects::after {
-            content: '';
             background-image: url('../../../../public/assets/nav/projects_nav.svg');
-            background-size: contain;
-            background-repeat: no-repeat;
-            position: absolute;
-            top: 45%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 150%;
-            height: 150%;
-
-            clip-path: inset(0 100% 0 0);
-            transition: clip-path 0.4s ease-out;
         }
 
         &--contact::after {
-            content: '';
             background-image: url('../../../../public/assets/nav/contact_nav.svg');
-            background-size: contain;
-            background-repeat: no-repeat;
-            position: absolute;
-            top: 45%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 150%;
-            height: 150%;
-
-            clip-path: inset(0 100% 0 0);
-            transition: clip-path 0.4s ease-out;
         }
-
-
     }
 
     &__a:hover::after {
