@@ -1,0 +1,32 @@
+.aboutme {
+    display: flex;
+    gap: 80px;
+    padding: 160px 120px;
+}
+
+.about-imgs {
+    display: flex;
+    flex-direction: column;
+
+    &__img {
+        width: 560px;
+    }
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+
+    &__h3 {
+        padding-bottom: 48px;
+    }
+
+    &__h3::after {
+        content: '';
+        background-image: url('/assets/icons/about_line.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 20px;
+        display: block;
+    }
+}
