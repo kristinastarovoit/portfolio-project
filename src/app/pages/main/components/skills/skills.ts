@@ -30,7 +30,7 @@ export class Skills {
     },
     {
       name: 'SASS',
-      img: '/icons/skill_sass.png'
+      img: '/icons/skill_sass.svg'
     },
     {
       name: 'Git',

@@ -1,11 +1,11 @@
 <section class="skills">
     <div>
-        <h2>MY STACK</h2>
-        <h3>Skill set</h3>
+        <h2 class="text-white">MY STACK</h2>
+        <h3 class="text-white">Skill set</h3>
     </div>
     <div>
         <div class="skills__paragraph">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            <p class="skills__paragraph__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Pariatur deserunt sit, quam dolores qui consequuntur impedit?
                 Aperiam corporis, laboriosam illum rerum voluptatem dolor,
                 deserunt nobis eius temporibus recusandae accusantium veniam.
@@ -15,7 +15,7 @@
             <div class="skills-content">
                 @for (skill of skills; track skill.name) {
                 <div class="skills-content__item">
-                    <img [src]="skill.img" [alt]="skill.name">
+                    <img class="skills-content__img" [src]="skill.img" [alt]="skill.name">
                     <p class="text-white skills-content__text">{{ skill.name }}</p>
                 </div>
                 }
