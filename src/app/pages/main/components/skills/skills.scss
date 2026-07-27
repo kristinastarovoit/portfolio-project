@@ -7,6 +7,24 @@
     background-position: bottom;
     padding: 170px 120px 200px;
 
+    &__h3 {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            background-image: url('/icons/skills_line.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 120%;
+            width: 150%;
+            left: 58%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            animation: circleReveal 5s ease-in-out infinite;
+        }
+    }
+
     &__paragraph {
         background-image: url('/sticker/skill_sticker.png');
         background-size: contain;
@@ -21,6 +39,7 @@
 
     &-content {
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
         max-width: 680px;
         gap: 40px;
@@ -50,4 +69,13 @@
             }
         }
     }
+}
+
+@keyframes circleReveal {
+    0% {clip-path: inset(100% 0 0 100%);}
+    20% {clip-path: inset(0 0 0 0);}
+    50% {clip-path: inset(0 0 0 0);}
+    70% {clip-path: inset(100% 0 0 100%);}
+    90% {clip-path: inset(100% 0 0 100%);}
+    100% {clip-path: inset(100% 0 0 100%);}
 }
