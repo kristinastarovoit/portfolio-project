@@ -45,4 +45,17 @@ export class Skills {
       img: '/icons/skill_scrum.png'
     }
   ]
+
+  card1Peeled = false;
+  card2Peeled = false;
+
+  peelCard1(): void {
+    this.card1Peeled = true;
+  }
+
+  peelCard2(): void {
+    if (this.card1Peeled) {
+      this.card2Peeled = true;
+    }
+  }
 }
