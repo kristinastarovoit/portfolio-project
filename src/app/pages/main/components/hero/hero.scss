@@ -1,0 +1,69 @@
+@use '../../../../styles/variables' as *;
+
+.hero {
+    background-image: url('/bg/hero.png');
+    background-size: cover;
+    background-position: bottom;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-left: 75px;
+
+    &__maincontent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__img-switch {
+        position: relative;
+
+        &--hover {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: .3s ease;
+        }
+
+        &--default {
+            opacity: 1;
+            transition: .3s ease;
+        }
+
+        &:hover .hero__img-switch--hover {
+            opacity: 1;
+        }
+
+        &:hover .hero__img-switch--default {
+            opacity: 0;
+        }
+    }
+
+    &__linkcontent {
+        align-self: flex-start;
+        gap: 8px;
+        display: flex;
+        flex-direction: column;
+
+        &-button {
+            border: 1px solid $white;
+            border-radius: 50%;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+
+            &>img {
+                height: 32px;
+                width: 32px;
+                // display: inline-block; ?????
+            }
+        }
+    }
+
+}

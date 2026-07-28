@@ -1,14 +1,16 @@
-<p>hero works!</p>
 <section class="hero">
-    <div>
+    <div class="hero__maincontent">
         <button>hello world</button>
-        <h1>Frontend DEVELOPER</h1>
-        <img src="">
+        <div class="hero__img-switch">
+            <img class="hero__img-switch--default" src="/sticker/polaroidframe.png">
+            <img class="hero__img-switch--hover" src="/sticker/polaroidframe_color.png">
+        </div>
+        <h1>Frontend<br> DEVELOPER</h1>
         <button>Get in Touch</button>
     </div>
-    <div>
-        <p><img>linkedin</p>
-        <p><img>github</p>
-        <p><img>mail</p>
+    <div class="hero__linkcontent">
+        <button class="hero__linkcontent-button"><a><img src="/icons/github.svg"></a></button>
+        <button class="hero__linkcontent-button"><a><img src="/icons/linkedin.svg"></a></button>
+        <button class="hero__linkcontent-button"><a><img src="/icons/mail.svg"></a></button>
     </div>
 </section>
