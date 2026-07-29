@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { PeelSticker } from './peel-sticker/peel-sticker';
 
 @Component({
   selector: 'app-skills',
-  imports: [],
+  imports: [PeelSticker],
   templateUrl: './skills.html',
   styleUrl: './skills.scss',
 })
@@ -46,16 +47,16 @@ export class Skills {
     }
   ]
 
-  card1Peeled = false;
-  card2Peeled = false;
+  // card1Peeled = false;
+  // card2Peeled = false;
 
-  peelCard1(): void {
-    this.card1Peeled = true;
-  }
+  // peelCard1(): void {
+  //   this.card1Peeled = true;
+  // }
 
-  peelCard2(): void {
-    if (this.card1Peeled) {
-      this.card2Peeled = true;
-    }
-  }
+  // peelCard2(): void {
+  //   if (this.card1Peeled) {
+  //     this.card2Peeled = true;
+  //   }
+  // }
 }

@@ -20,17 +20,7 @@
                 </div>
                 }
             </div>
-            <div class="peel">
-                <div class="peel__card peel__card--3">
-                    <img class="peel__card__img" src="/sticker/peelof_final.png">
-                </div>
-                <div class="peel__card peel__card--2" [class.is-peeled]="card2Peeled" (pointerdown)="peelCard2()">
-                    <img class="peel__card__img" src="/sticker/peelof_transition.png">
-                </div>
-                <div class="peel__card peel__card--1" [class.is-peeled]="card1Peeled" (pointerdown)="peelCard1()">
-                    <img class="peel__card__img" src="/sticker/peelof_default.png">
-                </div>
-            </div>
         </div>
     </div>
+    <app-peel-sticker></app-peel-sticker>
 </section>
