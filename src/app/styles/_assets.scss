@@ -1,0 +1,28 @@
+@use '_variables' as *;
+
+.btn {
+    width: fit-content;
+    border: 1px solid;
+    padding: 12px 24px;
+    border-radius: 100px;
+    transition: transform 255ms ease-in-out, box-shadow 255ms ease-in-out;
+
+    &:hover {
+        box-shadow: none;
+        transform: translate(3px, 3px);
+        background-color: $orange-accent;
+        color: $white;
+    }
+
+    &--white {
+        color: $white;
+        box-shadow: 3px 3px 0 $white;
+        border-color: $white;
+    }
+
+    &--black {
+        color: $black;
+        box-shadow: 3px 3px 0 $black;
+        border-color: $black;
+    }
+}
