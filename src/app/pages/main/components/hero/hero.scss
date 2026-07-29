@@ -49,7 +49,7 @@
         display: flex;
         flex-direction: column;
 
-        &-button {
+        &-link {
             border: 1px solid $white;
             border-radius: 50%;
             background-color: transparent;
@@ -57,13 +57,37 @@
             justify-content: center;
             align-items: center;
             width: 40px;
+            height: 40px;
+            position: relative;
+            overflow: hidden;
 
             &>img {
                 height: 32px;
                 width: 32px;
-                // display: inline-block; ?????
+                display: block;
+                position: relative;
+                z-index: 2;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $blue-accent;
+                border-radius: 50%;
+                transition: bottom 255ms ease;
+                z-index: 1;
+            }
+
+            &:hover {
+                &::before {
+                    bottom: 0;
+                }
             }
         }
-    }
 
+    }
 }
