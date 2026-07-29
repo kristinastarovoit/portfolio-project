@@ -1,0 +1,35 @@
+@use 'app/styles/main' as *;
+
+.footer {
+    width: 100%;
+    padding: 56px 120px;
+    background-image: url('/bg/contact.png');
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    // &__ul,
+    // &__li,
+    // &__a {
+    //     background-color: $black;
+    // }
+
+    &__links {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        height: 40px;
+        align-self: flex-start;
+    }
+
+    &__copyright {
+        font-size: 1.125rem;
+    }
+}
