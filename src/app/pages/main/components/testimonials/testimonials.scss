@@ -1,0 +1,66 @@
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 150px;
+
+    &__h3,
+    &__h2 {
+        align-self: flex-end;
+    }
+
+    &__section-wrapper {
+        display: flex;
+        // flex-wrap: wrap;
+    }
+
+    &__subline-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__linkedin-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        &> img {
+            height: 30px;
+        }
+    }
+
+    &__card {
+        background-image: url('/sticker/testimonial_sticker.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 512px;
+        height: 320px;
+        padding: 44px 50px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &--one {
+            z-index: 3;
+            top: 50px;
+            left: 200px;
+            rotate: -4deg;
+        }
+
+        &--two {
+            z-index: 2;
+            top: 50px;
+        }
+
+        &--three {
+            z-index: 1;
+            top: 50px;
+            left: -150px;
+            rotate: 4deg;
+        }
+    }
+}

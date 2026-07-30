@@ -1,10 +1,23 @@
 <p>testimonials works!</p>
 <section class="testimonials">
-    <h2>IN THEIR WORDS</h2>
-    <h3>Colleagues' Thoughts</h3>
-    <div>
-        <img>
-        <img>
-        <img>
+    <h2 class="testimonials__h2">IN THEIR WORDS</h2>
+    <h3 class="testimonials__h3">Colleagues' Thoughts</h3>
+    <div class="testimonials__section-wrapper">
+        @for(t of testimonials; track $index) {
+        <div class="testimonials__card {{t.className}}">
+            <p>{{t.text}}</p>
+            <div class="testimonials__subline-wrapper">
+                <div class="testimonials__name-wrapper">
+                    <p class="testimonials__name">{{t.name}}</p>
+                    <p class="testimonials__position">{{t.position}}</p>
+                </div>
+                <div class="testimonials__linkedin-wrapper">
+                    <img src="/icons/linkedin_black.png">
+                    <p>Profile</p>
+                </div>
+            </div>
+
+        </div>
+        }
     </div>
 </section>
