@@ -1,22 +1,25 @@
-<p>projects works!</p>
 <section class="projects">
-    <div>
+    <div class="projects__section projects__section--description">
         <h2>MY CRAFT</h2>
-        <h3>Projects</h3>
+        <h3 class="projects__h3">Projects</h3>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Harum quibusdam voluptas pariatur natus, dolorum cupiditate?
             Ea praesentium aut enim molestiae iste adipisci, dignissimos quia?
         </p>
     </div>
     @for (project of projects; track project.name) {
-    <div>
+    <div class="projects__section projects__section--projectinfo">
         @if(project.featured) {
-        <img src="/sticker/featured.png">
+        <img class="projects__sticker" src="/sticker/featured.png">
         }
-        <img [src]="project.img" [alt]="project.name">
-        <button>Project Details</button>
-        <h4>{{project.name}}</h4>
-        <p>{{project.description}}</p>
+        <div class="projects__img-wrapper">
+            <img class="projects__img" [src]="project.img" [alt]="project.name">
+            <a class="btn btn-white projects__button">Project Details</a>
+        </div>
+        <div>
+            <h4>{{project.name}}</h4>
+            <p>{{project.description}}</p>
+        </div>
     </div>
     }
 </section>
