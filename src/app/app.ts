@@ -8,10 +8,11 @@ import { Skills } from "./pages/main/components/skills/skills";
 import { Projects } from "./pages/main/components/projects/projects";
 import { Testimonials } from './pages/main/components/testimonials/testimonials';
 import { Contact } from "./pages/main/components/contact/contact";
+import { MainPage } from "./pages/main/main-page/main-page";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Footer, Hero, About, Skills, Projects, Testimonials, Contact],
+  imports: [RouterOutlet, Header, Footer, Hero, About, Skills, Projects, Testimonials, Contact, MainPage],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
