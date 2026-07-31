@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core';
+import { MagicButton } from './magic-button/magic-button';
 interface Letter {
   char: string;
   active: boolean;
@@ -6,7 +7,7 @@ interface Letter {
 
 @Component({
   selector: 'app-hero',
-  imports: [],
+  imports: [MagicButton],
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })

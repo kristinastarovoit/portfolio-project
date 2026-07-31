@@ -10,6 +10,10 @@
     flex-direction: column;
     justify-content: center;
 
+    &__magic-button {
+        align-self: flex-start;
+    }
+
     &__title {
         display: flex;
         flex-direction: column;
@@ -40,7 +44,7 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        padding: 110px 200px;
+        padding: 50px 200px 110px;
     }
 
     &__img-switch {
@@ -131,3 +135,4 @@
     }
 
 }
+
