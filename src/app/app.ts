@@ -12,7 +12,7 @@ import { MainPage } from "./pages/main/main-page/main-page";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Footer, Hero, About, Skills, Projects, Testimonials, Contact, MainPage],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
