@@ -10,12 +10,35 @@
     gap: 22px;
 
     &__links {
-        list-style-type: none;
         margin: 0;
         padding: 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    &__legal-notice {
+        position: relative;
+        padding-bottom: 8px;
+
+        &::after {
+            content: '';
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            width: 150%;
+            height: 150%;
+            top: 50%;
+            left: 75%;
+            clip-path: inset(0 100% 0 0);
+            transition: clip-path 0.4s ease-out;
+            background-image: url('/nav/contact_nav.svg');
+        }
+
+        &:hover::after {
+            clip-path: inset(0 0 0 0);
+        }
     }
 
     &__logo {
@@ -25,5 +48,73 @@
 
     &__copyright {
         font-size: 1.125rem;
+    }
+
+    &__link-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+
+    &__icon {
+        position: absolute;
+        top: -30px;
+        left: 66%;
+        z-index: 2;
+        height: 33px;
+        width: 33px;
+        opacity: 0;
+        pointer-events: none;
+        transform-origin: center;
+        transform: translate(-50%, 0) rotate(0deg);
+        transition: opacity 0.3s ease;
+    }
+
+    &__link-wrapper:hover &__icon {
+        animation: rollAway 1s cubic-bezier(.3, 0, .2, 1) forwards;
+    }
+
+    &__single-link-wrapper {
+        padding: 12px 24px;
+        border: 1px solid transparent;
+        border-radius: 99px;
+        transition: all 255ms ease-in-out;
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: $blue-accent;
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.45s cubic-bezier(.4, 0, .2, 1);
+            z-index: -1;
+        }
+
+        &:hover::before {
+            transform: scaleX(1);
+        }
+    }
+}
+
+@keyframes rollAway {
+    0% {
+        opacity: 0;
+        left: 66%;
+        transform: translate(-50%, 0) rotate(0deg);
+    }
+
+    12% {
+        opacity: 1;
+        left: 66%;
+        transform: translate(-50%, 0) rotate(0deg);
+    }
+
+    100% {
+        opacity: 1;
+        left: 100%;
+        transform: translate(-50%, 0) rotate(360deg);
     }
 }
