@@ -4,12 +4,11 @@
     background-image: url('/bg/hero.png');
     background-size: cover;
     background-position: bottom;
-    height: 100dvh;
+    background-repeat: no-repeat;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    padding: 75px;
 
     &__title {
         display: flex;
@@ -41,22 +40,28 @@
         justify-content: center;
         align-items: center;
         width: 100%;
+        padding: 110px 200px;
     }
 
     &__img-switch {
         position: relative;
         align-self: flex-end;
+        rotate: 8deg;
+        top: 100px;
+        right: 70px;
 
         &--hover {
             position: absolute;
             inset: 0;
             opacity: 0;
             transition: 255ms ease;
+            height: 244px;
         }
 
         &--default {
             opacity: 1;
             transition: 255ms ease;
+            height: 244px;
         }
 
         &:hover .hero__img-switch--hover {
@@ -81,6 +86,8 @@
         gap: 8px;
         display: flex;
         flex-direction: column;
+        padding-left: 75px;
+        padding-bottom: 100px;
 
         &-link {
             border: 1px solid $white;
