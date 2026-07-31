@@ -36,6 +36,8 @@
             height: 30px;
             display: block;
             width: 100%;
+            clip-path: inset(0 100% 0 0);
+            animation: arrow-reveal 5s ease-in-out infinite;
         }
     }
 
@@ -94,5 +96,23 @@
         height: 100%;
         object-fit: cover;
         transition: transform 500ms ease;
+    }
+}
+
+@keyframes arrow-reveal {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    30% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    85% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    100% {
+        clip-path: inset(0 100% 0 0);
     }
 }

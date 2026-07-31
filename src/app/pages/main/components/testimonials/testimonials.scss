@@ -12,6 +12,24 @@
         align-self: flex-end;
     }
 
+    &__h2 {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 36px;
+            background-image: url("/sticker/testimonial_arrow.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            left: -100px;
+            top: -35px;
+            clip-path: inset(0 0 0 100%);
+            animation: arrow-reveal 5s ease-in-out infinite;
+        }
+    }
+
     &__name-wrapper {
         transition: all 255ms ease-in-out;
     }
@@ -101,5 +119,23 @@
             left: -150px;
             rotate: 4deg;
         }
+    }
+}
+
+@keyframes arrow-reveal {
+    0% {
+        clip-path: inset(0 0 0 100%);
+    }
+
+    30% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    85% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 100%);
     }
 }

@@ -19,14 +19,34 @@
 
     &__h3 {
         padding-bottom: 48px;
+
+        &::after {
+            content: '';
+            background-image: url('/icons/about_line.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 20px;
+            display: block;
+            clip-path: inset(0 100% 0 0);
+            animation: arrow-reveal 5s ease-in-out infinite;
+        }
+    }
+}
+
+@keyframes arrow-reveal {
+    0% {
+        clip-path: inset(0 100% 0 0);
     }
 
-    &__h3::after {
-        content: '';
-        background-image: url('/icons/about_line.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: 20px;
-        display: block;
+    30% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    85% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    100% {
+        clip-path: inset(0 100% 0 0);
     }
 }

@@ -9,7 +9,7 @@
     gap: 160px;
 
     &__accept-text {
-        margin-top: 40px; 
+        margin-top: 40px;
     }
 
     &__text-content {
@@ -21,6 +21,8 @@
 
     &__arrow {
         align-self: flex-end;
+        clip-path: inset(0 100% 0 0);
+        animation: arrow-reveal 5s ease-in-out infinite;
     }
 
     &__input-wrapper {
@@ -73,5 +75,22 @@
             background-color: transparent;
         }
     }
+}
 
+@keyframes arrow-reveal {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    30% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    85% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    100% {
+        clip-path: inset(0 100% 0 0);
+    }
 }
