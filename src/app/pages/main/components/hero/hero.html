@@ -1,12 +1,22 @@
 <section class="hero">
     <div class="hero__maincontent">
-        <button>hello world</button>
+        <button class="hero__button">hello world</button>
         <div class="hero__img-switch">
             <img class="hero__img-switch--default" src="/sticker/polaroidframe.png">
             <img class="hero__img-switch--hover" src="/sticker/polaroidframe_color.png">
         </div>
-        <h1>Frontend<br> DEVELOPER</h1>
-        <a class="btn btn--white">Get in Touch</a>
+        <div class="hero__title">
+            @for (word of words(); track $index; let wi = $index) {
+            <div class="hero__word" [style.margin-left.px]="wi * 80">
+                @for (letter of word; track $index) {
+                <span class="hero__letter" [class.hero__letter--active]="letter.active" (mouseenter)="setActive(letter, true)"
+                    (mouseleave)="setActive(letter, false)" (click)="toggleLetter(word, letter)">{{ displayChar(letter)
+                    }}</span>
+                }
+            </div>
+            }
+        </div>
+        <a class="btn btn--white hero__contact-button">Get in Touch</a>
     </div>
     <div class="hero__linkcontent">
         <a class="hero__linkcontent-link"><img src="/icons/github.svg"></a>
