@@ -21,6 +21,31 @@
 
     &__logo {
         height: 40px;
+        display: block;
+    }
+
+    &__logo-switch {
+        position: relative;
+        display: inline-block;
+
+        .nav__logo--yellow {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity .3s ease;
+        }
+
+        .nav__logo--blue {
+            transition: opacity .3s ease;
+        }
+
+        &:hover .nav__logo--yellow {
+            opacity: 1;
+        }
+
+        &:hover .nav__logo--blue {
+            opacity: 0;
+        }
     }
 
     &__a {
@@ -66,7 +91,4 @@
             background-image: url('/nav/contact_nav.svg');
         }
     }
-
-
-
 }

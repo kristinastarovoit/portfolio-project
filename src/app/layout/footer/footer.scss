@@ -43,13 +43,32 @@
 
     &__logo {
         height: 40px;
-        align-self: flex-start;
+        display: block;
     }
 
-    &__copyright {
-        font-size: 1.125rem;
-    }
+    &__logo-switch {
+        position: relative;
+        display: inline-block;
 
+        .footer__logo--yellow {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity .3s ease;
+        }
+
+        .footer__logo--blue {
+            transition: opacity .3s ease;
+        }
+
+        &:hover .footer__logo--yellow {
+            opacity: 1;
+        }
+
+        &:hover .footer__logo--blue {
+            opacity: 0;
+        }
+    }
     &__link-wrapper {
         position: relative;
         display: inline-block;
