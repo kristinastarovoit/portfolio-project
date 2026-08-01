@@ -16,7 +16,7 @@
         }
         <div class="projects__img-wrapper">
             <img [class]="project.className" [src]="project.img" [alt]="project.name">
-            <a class="btn btn--white projects__button">Project Details</a>
+            <a [routerLink]="['/project-detail', project.slug]" class="btn btn--white projects__button">Project Details</a>
         </div>
         <div>
             <h4>{{project.name}}</h4>
