@@ -2,11 +2,11 @@ import { Component, input, inject } from '@angular/core';
 import { ProjectsService } from '../../services/projects.service';
 import { Project } from '../../interfaces/project';
 import { Header } from "../../layout/header/header";
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-project-details',
-  imports: [Header],
+  imports: [Header, RouterLink],
   templateUrl: './project-details.html',
   styleUrl: './project-details.scss',
 })

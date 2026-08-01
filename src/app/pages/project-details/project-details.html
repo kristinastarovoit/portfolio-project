@@ -5,7 +5,7 @@ und da sich bei signals ggfalls etwas ändern kann, gibt TS einen error: project
 <section class="project-detail">
     @if (project(); as p){
     <div class="project-detail__wrapper project-detail__wrapper--info">
-        <a class="project-detail__link project-detail__link--back"><img src="/icons/project_arrow_orange.png">Go Back</a>
+        <a [routerLink]="''" class="project-detail__link project-detail__link--back"><img src="/icons/project_arrow_orange.png">Go Back</a>
         <h3 class="project-detail__h3">{{p.name}}</h3>
 
         <div class="project-detail__text-wrapper">
