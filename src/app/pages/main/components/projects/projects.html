@@ -9,7 +9,7 @@
             Every challenge is an opportunity to learn something new and continuously improve my skills.
         </p>
     </div>
-    @for (project of projects; track project.name) {
+    @for (project of projects(); track project.name) {
     <div class="projects__section projects__section--projectinfo">
         @if(project.featured) {
         <img class="projects__sticker" src="/sticker/featured.png">

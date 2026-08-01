@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ProjectsService } from '../../../../services/projects.service';
 
 @Component({
   selector: 'app-projects',
@@ -7,27 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './projects.scss',
 })
 export class Projects {
-  projects = [
-    {
-      name: "Join",
-      description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-      featured: true,
-      img: "/img/join.png",
-      className: 'projects__img projects__img--float'
-    },
-    {
-      name: "El Pollo Loco",
-      description: "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
-      featured: false,
-      img: "/img/elpolloloco.png",
-      className: 'projects__img'
-    },
-    {
-      name: "PokéDex",
-      description: "Interactive Pokédex app fetching dynamic data from the PokéAPI. Browse Pokémon, view detailed stats, types, and abilities in a clean, visual interface.",
-      featured: false,
-      img: "/img/pokedex.png",
-      className: 'projects__img'
-    }
-  ]
+  projectsService = inject(ProjectsService);
+  projects = this.projectsService.projects;
 }
