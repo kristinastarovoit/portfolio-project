@@ -58,10 +58,32 @@
         right: -10%;
     }
 
+    &__technologies-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        &--content {
+            display: flex;
+            gap: 5px;
+        }
+    }
+
+    &__icon {
+        width: 24px;
+    }
+
     &__button-wrapper {
         display: flex;
         gap: 32px;
     }
+
+    &__d-heading {
+        font-size: 1.125rem;
+        font-weight: 700;
+    }
+
+
 
     &__link {
         transition: all 255ms ease-in-out;

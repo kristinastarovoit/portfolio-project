@@ -26,11 +26,20 @@ export class ProjectsService {
             img: "/img/elpolloloco.png",
             className: 'projects__img',
             details: "string",
-            duration: "string",
+            duration: "3 weeks",
             technologies: [{
-                icon: "string",
-                technology: "string"
-            }]
+                icon: "/icons/skill_js.png",
+                technology: "JavaScript"
+            },
+            {
+                icon: "/icons/skill_html.png",
+                technology: "HTML"
+            },
+            {
+                icon: "/icons/skill_css.png",
+                technology: "CSS"
+            }
+            ]
         },
         {
             slug: "pokedex",
@@ -40,15 +49,19 @@ export class ProjectsService {
             img: "/img/pokedex.png",
             className: 'projects__img',
             details: "string",
-            duration: "string",
+            duration: "1 week",
             technologies: [{
-                icon: "string",
-                technology: "string"
+                icon: "/icons/skill_html.png",
+                technology: "HTML"
+            }, 
+            {
+                icon: "/icons/skill_css.png",
+                technology: "CSS"
             }]
         }
     ]);
 
-    getBySlug(slug:string): Project | undefined {
+    getBySlug(slug: string): Project | undefined {
         return this.projects().find(p => p.slug === slug);
     }
 }
