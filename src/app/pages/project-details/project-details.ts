@@ -1,10 +1,11 @@
 import { Component, input, inject } from '@angular/core';
 import { ProjectsService } from '../../services/projects.service';
 import { Project } from '../../interfaces/project';
+import { Header } from "../../layout/header/header";
 
 @Component({
   selector: 'app-project-details',
-  imports: [],
+  imports: [Header],
   templateUrl: './project-details.html',
   styleUrl: './project-details.scss',
 })

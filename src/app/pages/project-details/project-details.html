@@ -1,9 +1,52 @@
-<p>project-details works!</p>
 <!-- as p merkt sich projects() und kann so weiterhin im if block genutzt werden.
 TS weiß nicht, dass das project() in der if Bedingung dasselbe ist, wie im if block. U
 und da sich bei signals ggfalls etwas ändern kann, gibt TS einen error: projects().name : object is possibly undefined -->
-@if (project(); as p){
-    <p>{{p.name}}</p>
-} @else {
-    <p>not found</p>
-}
+<app-header></app-header>
+<section class="project-detail">
+    @if (project(); as p){
+    <div class="project-detail__wrapper project-detail__wrapper--info">
+        <a class="project-detail__link project-detail__link--back"><img src="/icons/project_arrow_orange.png">Go Back</a>
+        <h3 class="project-detail__h3">{{p.name}}</h3>
+
+        <div class="project-detail__text-wrapper">
+            <h4>Description</h4>
+            <p>{{p.description}}</p>
+        </div>
+        <div class="project-detail__text-wrapper">
+            <h4>Implementation Details</h4>
+            <p>{{p.details}}</p>
+        </div>
+        <div class="project-detail__text-wrapper">
+            <p>Duration <span>{{p.duration}}</span></p>
+            <div class="project-detail__technologies-wrapper">
+                @for (tech of p.technologies; track $index) {
+                <img [src]="tech.icon">
+                <p>{{tech.technology}}</p>
+                }
+            </div>
+        </div>
+
+    </div>
+    <div class="project-detail__wrapper project-detail__wrapper--image">
+        @if (p.name === 'Join') {
+        <img class="project-detail__img" src="/img/join_detail.jpg">
+        } 
+        @else {
+        <img class="project-detail__img" [src]="p.img">
+        }
+        @if (p.featured) {
+        <img class="project-detail__sticker" src="/sticker/featured.png">
+        } @else {
+        <img class="project-detail__sticker" src="/sticker/sticker_round.png">
+        }
+        <div class="project-detail__button-wrapper">
+            <a class="btn btn--white">GitHub</a>
+            <a class="btn btn--white">Live Test</a>
+        </div>
+        <a class="project-detail__link project-detail__link--next">Next Project <img src="/icons/project_arrow.png"></a>
+    </div>
+    }
+    @else {
+    <h2 class="project-detail__notfound">not found</h2>
+    }
+</section>
