@@ -1,1 +1,9 @@
 <p>project-details works!</p>
+<!-- as p merkt sich projects() und kann so weiterhin im if block genutzt werden.
+TS weiß nicht, dass das project() in der if Bedingung dasselbe ist, wie im if block. U
+und da sich bei signals ggfalls etwas ändern kann, gibt TS einen error: projects().name : object is possibly undefined -->
+@if (project(); as p){
+    <p>{{p.name}}</p>
+} @else {
+    <p>not found</p>
+}
