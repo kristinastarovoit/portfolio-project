@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 120px 150px;
+    padding: 120px;
 
     &__h3,
     &__h2 {
@@ -36,7 +36,8 @@
 
     &__section-wrapper {
         display: flex;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
+        justify-content: center;
     }
 
     &__subline-wrapper {
@@ -59,7 +60,7 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        width: 512px;
+        width: 480px;
         height: 320px;
         padding: 44px 50px;
         position: relative;
@@ -102,7 +103,7 @@
             background-image: url("/sticker/testimonial_sticker2.png");
             z-index: 3;
             top: 50px;
-            left: 200px;
+            left: 0;
             rotate: -4deg;
         }
 
@@ -110,13 +111,14 @@
             background-image: url('/sticker/testimonial_sticker.png');
             z-index: 2;
             top: 50px;
+            left: -150px;
         }
 
         &--three {
             background-image: url("/sticker/testimonial_sticker2.png");
             z-index: 1;
             top: 50px;
-            left: -150px;
+            left: -500px;
             rotate: 4deg;
         }
     }
