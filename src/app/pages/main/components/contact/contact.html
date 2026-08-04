@@ -4,10 +4,11 @@
             <h2 class="text-white">CONTACT ME</h2>
             <h3 class="text-white contact__h3">Ready to work together?</h3>
         </div>
-        <p class="text-white">I'm currently looking for a remote Frontend or Fullstack Developer position, 
-            or a role with a home office option, where I can continue to grow and contribute to meaningful projects. 
-            If you're looking for someone who is curious, reliable, eager to learn, and enjoys working collaboratively, 
-            I'd love to hear from you. I'm excited to bring my skills, enthusiasm, and commitment to a team while continuously 
+        <p class="text-white">I'm currently looking for a remote Frontend or Fullstack Developer position,
+            or a role with a home office option, where I can continue to grow and contribute to meaningful projects.
+            If you're looking for someone who is curious, reliable, eager to learn, and enjoys working collaboratively,
+            I'd love to hear from you. I'm excited to bring my skills, enthusiasm, and commitment to a team while
+            continuously
             expanding my knowledge and taking on new challenges.
             Let's build something great together!
         </p>
@@ -15,20 +16,25 @@
     </div>
     <div class="contact__form-content">
         <img src="/sticker/sticker_round.png">
-        <div class="contact__input-wrapper">
-            <label class="text-white contact__label" for="name">What's your name?</label>
-            <input id="name" type="text">
-        </div>
-        <div class="contact__input-wrapper">
-            <label class="text-white contact__label" for="mail">What's your email?</label>
-            <input id="mail" type="text">
-        </div>
-        <div class="contact__input-wrapper">
-            <label class="text-white contact__label" for="message">How can I help you?</label>
-            <input id="message" type="text">
-        </div>
-        <p class="contact__accept-text text-white">DSVG gelesen</p>
-        <p>Please accept the <a routerLink="privacypolicy">privacy policy</a>.</p>
-        <button class="btn btn--white" type="button" disabled>Send</button>
+        <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+
+            <div class="contact__input-wrapper">
+                <label class="text-white contact__label" for="name">What's your name?</label>
+                <input id="name" type="text" formControlName="name">
+            </div>
+            <div class="contact__input-wrapper">
+                <label class="text-white contact__label" for="mail">What's your email?</label>
+                <input id="mail" type="email" formControlName="email">
+            </div>
+            <div class="contact__input-wrapper">
+                <label class="text-white contact__label" for="message">How can I help you?</label>
+                <input id="message" type="text" formControlName="message">
+            </div>
+            <p class="contact__accept-text text-white">DSVG gelesen</p>
+            <input type="checkbox"><p>Please accept the <a routerLink="privacypolicy">privacy policy</a>.</p>
+            <button class="btn btn--white" type="submit" (click)="submitForm()" [disabled]="!contactForm.value">Send</button>
+        </form>
+
+
     </div>
 </section>
