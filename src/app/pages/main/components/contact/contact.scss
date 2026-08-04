@@ -6,6 +6,8 @@
     background-position: top;
     padding: 180px 120px 150px 120px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 160px;
 
     &__accept-text {
@@ -13,7 +15,6 @@
     }
 
     &__text-content {
-        width: 50%;
         display: flex;
         flex-direction: column;
         gap: 48px;
@@ -48,7 +49,7 @@
     &__form-content {
         display: flex;
         flex-direction: column;
-        width: 50%;
+        min-width: 50%;
 
         label,
         input {
@@ -104,5 +105,31 @@
     .contact {
         padding-left: max(120px, calc(50% - 720px));
         padding-right: max(120px, calc(50% - 720px));
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .contact__form-content {
+        img {
+            top: 0%;
+        }
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    .contact {
+        flex-direction: column;
+        gap: 40px;
+
+        &__form-content {
+            width: 600px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact {
+        padding-left: 72px;
+        padding-right: 72px;
     }
 }
