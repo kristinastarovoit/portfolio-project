@@ -92,3 +92,10 @@
         }
     }
 }
+
+@media screen and (min-width: 1440px) {
+    .nav {
+        padding-left: max(72px, calc(50% - 720px));
+        padding-right: max(72px, calc(50% - 720px));
+    }
+}

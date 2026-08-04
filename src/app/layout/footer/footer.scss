@@ -137,3 +137,10 @@
         transform: translate(-50%, 0) rotate(360deg);
     }
 }
+
+@media screen and (min-width: 1440px) {
+    .footer {
+        padding-left: max(120px, calc(50% - 720px));
+        padding-right: max(120px, calc(50% - 720px));
+    }
+}

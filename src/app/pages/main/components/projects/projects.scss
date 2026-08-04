@@ -135,3 +135,10 @@
         transform: translateY(-20px);
     }
 }
+
+@media screen and (min-width: 1440px) {
+    .projects {
+        padding-left: max(120px, calc(50% - 720px));
+        padding-right: max(120px, calc(50% - 720px));
+    }
+}

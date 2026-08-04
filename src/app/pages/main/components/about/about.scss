@@ -50,3 +50,10 @@
         clip-path: inset(0 100% 0 0);
     }
 }
+
+@media screen and (min-width: 1440px) {
+    .aboutme {
+        padding-left: max(120px, calc(50% - 720px));
+        padding-right: max(120px, calc(50% - 720px));
+    }
+}

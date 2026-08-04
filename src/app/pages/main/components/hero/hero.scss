@@ -136,3 +136,15 @@
 
 }
 
+@media screen and (min-width: 1440px) {
+    .hero {
+        &__maincontent {
+            padding-left: max(200px, calc(50% - 720px));
+            padding-right: max(200px, calc(50% - 720px));
+        }
+
+        &__linkcontent {
+            padding-left: max(75px, calc(50% - 720px));
+        }
+    }
+}
