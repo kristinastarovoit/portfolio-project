@@ -1,15 +1,38 @@
 <nav class="nav">
-    <ul class="nav__ul">
+    <ul class="nav__desktop nav__ul">
         <li class="nav__li">
-            <a class="nav__logo-switch">
+            <a class="nav__logo-switch nav__logo-desktop">
                 <img class="nav__logo nav__logo--blue" src="/icons/sk_logo.svg">
                 <img class="nav__logo nav__logo--yellow" src="/icons/sk_logo_yellow.svg">
             </a>
         </li>
-        <li class="nav__li"><a class="nav__a nav__a--about">About Me</a></li>
-        <li class="nav__li"><a class="nav__a nav__a--skills">Skills</a></li>
-        <li class="nav__li"><a class="nav__a nav__a--projects">Projects</a></li>
-        <li class="nav__li"><a class="nav__a nav__a--contact">Contact</a></li>
-        <li class="nav__li"><button>toggle lang</button></li>
+        <li class="nav__mobile-icon" (click)="toggleMenu()"><img src="/icons/burgermenu.png"></li>
+        <li class="nav__li nav__li--desktop"><a class="nav__a nav__a--about">About Me</a></li>
+        <li class="nav__li nav__li--desktop"><a class="nav__a nav__a--skills">Skills</a></li>
+        <li class="nav__li nav__li--desktop"><a class="nav__a nav__a--projects">Projects</a></li>
+        <li class="nav__li nav__li--desktop"><a class="nav__a nav__a--contact">Contact</a></li>
+        <li class="nav__li nav__li--desktop"><button>toggle lang</button></li>
     </ul>
+
+    <div class="nav__mobile" [class.nav__mobile--open]="isMenuOpen">
+        <button class="nav__button--close" (click)="toggleMenu()"><img src="/icons/close.png"></button>
+        <ul>
+            <li class="nav__li">
+                <a class="nav__logo-switch">
+                    <img class="nav__logo nav__logo--blue" src="/icons/sk_logo.svg">
+                    <img class="nav__logo nav__logo--yellow" src="/icons/sk_logo_yellow.svg">
+                </a>
+            </li>
+            <li class="nav__li"><a class="nav__a nav__a--about">About Me</a></li>
+            <li class="nav__li"><a class="nav__a nav__a--skills">Skills</a></li>
+            <li class="nav__li"><a class="nav__a nav__a--projects">Projects</a></li>
+            <li class="nav__li"><a class="nav__a nav__a--contact">Contact</a></li>
+            <li class="nav__li"><button >toggle lang</button></li>
+            <div class="hero__linkcontent hero__linkcontent--row">
+                <a class="hero__linkcontent-link"><img src="/icons/github.svg"></a>
+                <a class="hero__linkcontent-link"><img src="/icons/linkedin.svg"></a>
+                <a class="hero__linkcontent-link"><img src="/icons/mail.svg"></a>
+            </div>
+        </ul>
+    </div>
 </nav>

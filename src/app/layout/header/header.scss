@@ -1,13 +1,21 @@
 @use 'app/styles/main' as *;
+@use 'app/pages/main/components/hero/hero' as*;
 
 .nav {
     background-color: $black;
     padding: 20px 72px;
 
-    &__ul,
-    &__li,
-    &__a {
+    &__mobile-icon {
+        display: none;
+    }
+
+    &__mobile {
+        display: none;
+    }
+
+    &__li--desktop {
         background-color: $black;
+        cursor: pointer;
     }
 
     &__ul {
@@ -97,5 +105,58 @@
     .nav {
         padding-left: max(72px, calc(50% - 720px));
         padding-right: max(72px, calc(50% - 720px));
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .nav {
+        background-image: url('/bg/hero.png');
+
+        &__button--close {
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            align-self: flex-end;
+        }
+
+        &__logo-desktop {
+            display: none;
+        }
+
+        &__li {
+            &--desktop {
+                display: none;
+            }
+        }
+
+        &__mobile--open {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            text-align: center;
+            background-image: url('/bg/hero.png');
+            background-size: cover;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            padding: 50px;
+            position: absolute;
+            inset: 0;
+            z-index: 5;
+            width: 100%;
+            height: fit-content
+        }
+
+        &__mobile-icon {
+            display: block;
+            cursor: pointer;
+        }
+
+        &__mobile {
+            .nav__li {
+                margin-bottom: 20px;
+            }
+        }
     }
 }

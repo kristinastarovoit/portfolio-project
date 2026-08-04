@@ -93,6 +93,13 @@
         padding-left: 75px;
         padding-bottom: 100px;
 
+        &--row {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+
         &-link {
             border: 1px solid $white;
             border-radius: 50%;
