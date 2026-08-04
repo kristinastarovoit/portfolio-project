@@ -142,3 +142,53 @@
         padding-right: max(120px, calc(50% - 720px));
     }
 }
+
+@media screen and (max-width: 1440px) {
+    .projects {
+        padding-left: 72px;
+        padding-right: 72px;
+
+        &__section,
+        &__img-wrapper {
+            max-width: 400px;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .projects {
+        &__section,
+        &__img-wrapper {
+            max-width: 400px;
+            height: auto;
+        }
+
+        &__sticker {
+            top: 28%;
+        }
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .projects {
+        &__section,
+        &__img-wrapper {
+            max-width: 560px;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .projects {
+        padding-left: 48px;
+        padding-right: 48px;
+
+        &__section,
+        &__img-wrapper {
+            max-width: 450px;
+            height: auto;
+        }
+    }
+}
