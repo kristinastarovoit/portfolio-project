@@ -7,11 +7,24 @@
             </a>
         </li>
         <li class="nav__mobile-icon" (click)="toggleMenu()"><img src="/icons/burgermenu.png"></li>
-        <li class="nav__li nav__li--desktop"><a class="nav__a nav__a--about">About Me</a></li>
-        <li class="nav__li nav__li--desktop"><a class="nav__a nav__a--skills">Skills</a></li>
-        <li class="nav__li nav__li--desktop"><a class="nav__a nav__a--projects">Projects</a></li>
-        <li class="nav__li nav__li--desktop"><a class="nav__a nav__a--contact">Contact</a></li>
-        <li class="nav__li nav__li--desktop"><button>toggle lang</button></li>
+        <li class="nav__li nav__li--desktop"><a class="nav__a nav__a--about">{{ 'app.nav.about' | translate }}</a></li>
+        <li class="nav__li nav__li--desktop"><a class="nav__a nav__a--skills">{{ 'app.nav.skills' | translate }}</a>
+        </li>
+        <li class="nav__li nav__li--desktop"><a class="nav__a nav__a--projects">{{ 'app.nav.projects' | translate }}</a>
+        </li>
+        <li class="nav__li nav__li--desktop"><a class="nav__a nav__a--contact">{{ 'app.nav.contact' | translate }}</a>
+        </li>
+
+        <li class="nav__lang-toggle nav__li nav__li--desktop">
+            <span class="nav__lang-label nav__lang-label" (click)="switchToSetLanguage('en')"
+                [class.nav__active]="currentLanguage() == 'en'">EN</span>
+            <button type="button" class="nav__toggle-switch" (click)="switchLanguage()"
+                [class.nav__active]="currentLanguage() == 'de'">
+                <span class="nav__toggle-circle"></span>
+            </button>
+            <span class="nav__lang-label nav__lang-label" (click)="switchToSetLanguage('de')"
+                [class.nav__active]="currentLanguage() == 'de'">DE</span>
+        </li>
     </ul>
 
     <div class="nav__mobile" [class.nav__mobile--open]="isMenuOpen">
@@ -23,29 +36,20 @@
                     <img class="nav__logo nav__logo--yellow" src="/icons/sk_logo_yellow.svg">
                 </a>
             </li>
-            <li class="nav__li"><a class="nav__a nav__a--about">About Me</a></li>
-            <li class="nav__li"><a class="nav__a nav__a--skills">Skills</a></li>
-            <li class="nav__li"><a class="nav__a nav__a--projects">Projects</a></li>
-            <li class="nav__li"><a class="nav__a nav__a--contact">Contact</a></li>
-
-
-
-
-            <li class="lang-toggle">
-                <span class="lang-label lang-label--en" >EN</span>
-
-                <button type="button" class="toggle-switch" >
-                    <span class="toggle-circle"></span>
+            <li class="nav__li"><a class="nav__a nav__a--about">{{ 'app.nav.about' | translate }}</a></li>
+            <li class="nav__li"><a class="nav__a nav__a--skills">{{ 'app.nav.skills' | translate }}</a></li>
+            <li class="nav__li"><a class="nav__a nav__a--projects">{{ 'app.nav.projects' | translate }}</a></li>
+            <li class="nav__li"><a class="nav__a nav__a--contact">{{ 'app.nav.contact' | translate }}</a></li>
+            <li class="nav__lang-toggle nav__lang-toggle--mobile">
+                <span class="nav__lang-label nav__lang-label" (click)="switchToSetLanguage('en')"
+                    [class.nav__active]="currentLanguage() == 'en'">EN</span>
+                <button type="button" class="nav__toggle-switch" (click)="switchLanguage()"
+                    [class.nav__active]="currentLanguage() == 'de'">
+                    <span class="nav__toggle-circle"></span>
                 </button>
-
-                <span class="lang-label lang-label--de">DE</span>
+                <span class="nav__lang-label nav__lang-label" (click)="switchToSetLanguage('de')"
+                    [class.nav__active]="currentLanguage() == 'de'">DE</span>
             </li>
-
-
-
-
-
-            <!-- <li class="nav__li"><button>toggle lang</button></li> -->
             <div class="hero__linkcontent hero__linkcontent--row">
                 <a class="hero__linkcontent-link"><img src="/icons/github.svg"></a>
                 <a class="hero__linkcontent-link"><img src="/icons/linkedin.svg"></a>

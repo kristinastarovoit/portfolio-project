@@ -1,0 +1,54 @@
+{
+    "app": {
+        "nav": {
+            "about": "Über mich",
+            "skills": "Fähigkeiten",
+            "projects": "Projekte",
+            "contact": "Kontakt"
+        },
+        "hero": {
+            "hello": "Hallo Welt",
+            "iam": "ICH BIN KRISTINA STAROVOIT",
+            "intouch": "Kontakt aufnehmen"
+        },
+        "aboutme": {
+            "heading": "WER IST KRISTINA",
+            "heading-two": "Über mich",
+            "text": "Meine Reise in die Webentwicklung begann während meiner Ausbildung zur Mediengestalterin, als ich zum ersten Mal mit HTML und CSS gearbeitet habe. Angetrieben von Neugier und der ständigen digitalen Weiterentwicklung wollte ich nicht nur verstehen, wie Websites aussehen, sondern auch, warum sie so funktionieren, wie sie funktionieren. Die Fragen „Warum?“ und „Wie?“ waren schon immer ein wichtiger Teil meiner Lernweise. Am meisten begeistert mich am Programmieren das Lösen von Problemen. Ich arbeite mich gerne tief in Herausforderungen ein und bleibe so lange dran, bis ich eine Lösung gefunden habe. Jedes Projekt bringt mir etwas Neues bei – genau das motiviert mich: die Möglichkeit, kontinuierlich zu lernen, mich weiterzuentwickeln und als Entwicklerin zu wachsen.",
+            "button": "Lass uns sprechen"
+        },
+        "skills": {
+            "heading": "MEIN TECH-STACK",
+            "heading-two": "Fähigkeiten",
+            "text": "Ich bin überzeugt, dass Lernen niemals aufhört. Ich bin immer offen dafür, neue Technologien zu entdecken, mein Wissen zu erweitern und mich neuen Herausforderungen anzupassen. Kontinuierliche Weiterentwicklung ist das, was mich als Entwicklerin antreibt."
+        },
+        "projects": {
+            "heading": "MEINE ARBEIT",
+            "heading-two": "Projekte",
+            "text": "Wirf einen Blick auf meine Projekte und sieh dir an, woran ich gearbeitet habe. Jedes Projekt hat mir dabei geholfen, meine Fähigkeiten im Lösen von Problemen zu stärken und mein Verständnis für moderne Webentwicklung zu vertiefen. Mein Ziel ist es, responsive, intuitive und benutzerfreundliche Anwendungen zu entwickeln und dabei sauberen, wartbaren Code zu schreiben. Jede Herausforderung ist eine Chance, etwas Neues zu lernen und meine Fähigkeiten kontinuierlich zu verbessern."
+        },
+        "testimonials": {
+            "heading": "IHRE WORTE",
+            "heading-two": "Gedanken meiner Kolleg:innen"
+        },
+        "contact": {
+            "heading": "KONTAKTIERE MICH",
+            "heading-two": "Bereit für eine Zusammenarbeit?",
+            "text": "Ich bin derzeit auf der Suche nach einer Remote-Position als Frontend- oder Fullstack-Entwicklerin oder einer Stelle mit Homeoffice-Möglichkeit, in der ich mich weiterentwickeln und an sinnvollen Projekten mitwirken kann. Wenn du jemanden suchst, der neugierig, zuverlässig, lernbereit ist und gerne im Team arbeitet, freue ich mich, von dir zu hören. Ich möchte meine Fähigkeiten, meine Begeisterung und mein Engagement in ein Team einbringen, dabei mein Wissen kontinuierlich erweitern und neue Herausforderungen annehmen. Lass uns gemeinsam etwas Großartiges entwickeln!",
+            "button": "Senden",
+            "namelabel": "Wie heißt du?",
+            "maillabel": "Wie lautet deine E-Mail-Adresse?",
+            "messagelabel": "Wie kann ich dir helfen?",
+            "checkboxtext": "Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu."
+        },
+        "footer": {
+            "legalnotice": "Impressum"
+        },
+        "legal-notice": {
+            "title": "Impressum"
+        },
+        "privacy-policy": {
+            "title": "Datenschutzerklärung"
+        }
+    }
+}

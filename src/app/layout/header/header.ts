@@ -1,15 +1,36 @@
-import { Component } from '@angular/core';
+import { Component, inject, Signal } from '@angular/core';
+import { TranslatePipe, TranslateDirective, TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [TranslatePipe, TranslateDirective],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
 export class Header {
+  translate = inject(TranslateService);
+
+  currentLanguage = this.translate.currentLang;
+
+  ngOnInit() {
+    this.translate.use('en');
+  }
+
+  switchLanguage() {
+    if (this.currentLanguage() == "en") {
+      this.translate.use("de");
+    } else if (this.currentLanguage() == "de") {
+      this.translate.use("en");
+    }
+  }
+
+  switchToSetLanguage(language: string) {
+    this.translate.use(language);
+  }
+
   isMenuOpen = false;
 
-  toggleMenu() :void {
+  toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
   }
 }

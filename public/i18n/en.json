@@ -1,0 +1,54 @@
+{
+    "app": {
+        "nav": {
+            "about": "About me",
+            "skills": "Skills",
+            "projects": "Projects",
+            "contact": "Contact"
+        },
+        "hero": {
+            "hello": "Hello world",
+            "iam": "I'M KRISTINA STAROVOIT",
+            "intouch": "Get in touch"
+        },
+        "aboutme": {
+            "heading": "WHO'S KRISTINA",
+            "heading-two": "About me",
+            "text": "My journey into web development started during my training as a media designer, where I first worked with HTML and CSS. Driven by curiosity and the constant digital evolution, I wanted to understand not only how websites look, but why they work the way they do. Asking \"Why?\" and \"How?\" has always been part of the way I learn. What excites me most about coding is solving problems. I enjoy diving deep into challenges and staying persistent until I find a solution. Every project teaches me something new, and that's exactly what motivates me—the opportunity to continuously learn, improve, and grow as a developer.",
+            "button": "Let's talk"
+        },
+        "skills": {
+            "heading": "MY STACK",
+            "heading-two": "Skill set",
+            "text": "I believe that learning never stops. I'm always open to exploring new technologies, expanding my knowledge, and adapting to new challenges. Continuous improvement is what drives me as a developer."
+        },
+        "projects": {
+            "heading": "MY CRAFT",
+            "heading-two": "Projects",
+            "text": "Take a look at my projects and see what I've been working on. Each project has helped me strengthen my problem-solving skills and deepen my understanding of modern web development. My goal is to create responsive, intuitive, and user-friendly applications while writing clean, maintainable code. Every challenge is an opportunity to learn something new and continuously improve my skills."
+        },
+        "testimonials": {
+            "heading": "IN THEIR WORDS",
+            "heading-two": "Colleagues' Thoughts"
+        },
+        "contact": {
+            "heading": "CONTACT ME",
+            "heading-two": "Ready to work together?",
+            "text": "I'm currently looking for a remote Frontend or Fullstack Developer position, or a role with a home office option, where I can continue to grow and contribute to meaningful projects. If you're looking for someone who is curious, reliable, eager to learn, and enjoys working collaboratively, I'd love to hear from you. I'm excited to bring my skills, enthusiasm, and commitment to a team while continuously expanding my knowledge and taking on new challenges. Let's build something great together!",
+            "button": "Send",
+            "namelabel": "What's your name?",
+            "maillabel": "What's your email?",
+            "messagelabel": "How can I help you?",
+            "checkboxtext": "I've read the privacy policy and agree to the processing of my data as outlined."
+        },
+        "footer": {
+            "legalnotice": "Legal notice"
+        },
+        "legal-notice": {
+            "title": "Legal notice"
+        },
+        "privacy-policy": {
+            "title": "Privacy policy"
+        }
+    }
+}
