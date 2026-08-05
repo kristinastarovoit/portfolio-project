@@ -12,6 +12,12 @@
 
     &__accept-text {
         margin-top: 40px;
+        font-size: 1rem;
+
+        a {
+            font-size: 1rem;
+            color: $blue-accent;
+        }
     }
 
     &__text-content {
@@ -51,6 +57,11 @@
         flex-direction: column;
         min-width: 50%;
 
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
         label,
         input {
             display: block;
@@ -60,6 +71,10 @@
         input {
             background-color: transparent;
             border: none;
+            width: 100%;
+            color: $white;
+            font-family: 'Bricolage Grotesque';
+            font-size: 1rem;
         }
 
         label {
@@ -80,6 +95,29 @@
             margin-top: 40px;
             background-color: transparent;
         }
+    }
+
+    &__checkbox-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .contact__checkbox {
+            height: 24px;
+            width: 24px;
+        }
+    }
+
+    &__error {
+        color: $error;
+    }
+
+    &__disabled,
+    &__disabled:hover {
+        border-color: $grey;
+        color: $grey;
+        box-shadow: 3px 3px 0 $grey;
+        transform: translate(0, 0);
     }
 }
 

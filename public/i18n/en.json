@@ -41,7 +41,17 @@
             "maillabel": "What's your email?",
             "messagelabel": "How can I help you?",
             "checkboxtext": "I've read the ",
-            "checkboxtext-two": " privacy policy and agree to the processing of my data as outlined."
+            "checkboxtext-two": " and agree to the processing of my data as outlined."
+        },
+        "errors": {
+            "name": "Oops! It seems your name is missing",
+            "email": "Oops! Your email is required",
+            "message": "What do you need to develop?"
+        },
+        "placeholder": {
+            "name": "Your name goes here",
+            "email":"youremail@email.com",
+            "message": "Hello Kristina, I am interested in..."
         },
         "legal-notice": {
             "title": "Legal notice"

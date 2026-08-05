@@ -11,23 +11,46 @@
     <div class="contact__form-content">
         <img src="/sticker/sticker_round.png">
         <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
-
             <div class="contact__input-wrapper">
                 <label class="text-white contact__label" for="name">{{'app.contact.namelabel' | translate}}</label>
-                <input id="name" type="text" formControlName="name">
+                <input id="name" type="text" formControlName="name"
+                    placeholder="{{'app.placeholder.name' | translate}}">
+                @if (!name?.valid && name?.touched) {
+                <span class="contact__input-message contact__error">
+                    {{ 'app.errors.name' | translate }}
+                </span>
+                }
             </div>
             <div class="contact__input-wrapper">
                 <label class="text-white contact__label" for="mail">{{'app.contact.maillabel' | translate}}</label>
-                <input id="mail" type="email" formControlName="email">
+                <input id="mail" type="email" formControlName="email"
+                    placeholder="{{'app.placeholder.email' | translate }}">
+                @if (!email?.valid && email?.touched) {
+                <span class="contact__input-message contact__error">
+                    {{ 'app.errors.email' | translate }}
+                </span>
+                }
             </div>
             <div class="contact__input-wrapper">
-                <label class="text-white contact__label" for="message">{{'app.contact.messagelabel' | translate}}</label>
-                <input id="message" type="text" formControlName="message">
+                <label class="text-white contact__label" for="message">{{'app.contact.messagelabel' |
+                    translate}}</label>
+                <input id="message" type="text" formControlName="message"
+                    placeholder="{{'app.placeholder.message' | translate }}">
+                @if (!message?.valid && message?.touched) {
+                <span class="contact__input-message contact__error">
+                    {{ 'app.errors.message' | translate }}
+                </span>
+                }
             </div>
-            <p class="contact__accept-text text-white">DSVG gelesen</p>
-            <input type="checkbox"><p>{{'app.contact.checkboxtext' | translate}}<a routerLink="privacypolicy">{{'app.privacy-policy.title' | translate}}</a> {{'app.contact.checkboxtext-two' | translate}}</p>
-            <button class="btn btn--white" type="submit" (click)="submitForm()" [disabled]="!contactForm.value">Send</button>
-        </form>
+            <div class="contact__checkbox-wrapper">
+                <input class="contact__checkbox" type="checkbox">
+                <p class="contact__accept-text text-white">{{'app.contact.checkboxtext' | translate}}<a
+                        routerLink="privacypolicy">{{'app.privacy-policy.title' |
+                        translate}}</a> {{'app.contact.checkboxtext-two' | translate}}</p>
+            </div>
 
+            <button class="btn btn--white contact__sendbutton" type="submit" (click)="submitForm()"
+                [disabled]="isFormInvalid()" [class.contact__disabled]="isFormInvalid()">Send</button>
+        </form>
     </div>
 </section>
