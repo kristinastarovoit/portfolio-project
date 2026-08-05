@@ -4,3 +4,6 @@
 @forward '_typography';
 @forward '_layout';
 
+body.menu-open {
+    overflow: hidden;
+}

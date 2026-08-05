@@ -32,5 +32,9 @@ export class Header {
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
+    document.body.classList.toggle(
+      'menu-open',
+      this.isMenuOpen
+    );
   }
 }

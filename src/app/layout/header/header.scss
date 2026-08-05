@@ -11,6 +11,10 @@
 
     &__mobile {
         display: none;
+
+        &-ul {
+            list-style-type: none;
+        }
     }
 
     &__li--desktop {
@@ -212,7 +216,7 @@
             background-size: cover;
             background-position: bottom;
             background-repeat: no-repeat;
-            padding: 50px;
+            padding: 50px 50px 80px;
             position: absolute;
             inset: 0;
             z-index: 5;
