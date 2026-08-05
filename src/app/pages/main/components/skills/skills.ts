@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { PeelSticker } from './peel-sticker/peel-sticker';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skills',
-  imports: [PeelSticker],
+  imports: [PeelSticker, TranslatePipe],
   templateUrl: './skills.html',
   styleUrl: './skills.scss',
 })

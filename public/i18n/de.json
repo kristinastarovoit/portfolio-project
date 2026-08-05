@@ -9,7 +9,7 @@
         "hero": {
             "hello": "Hallo Welt",
             "iam": "ICH BIN KRISTINA STAROVOIT",
-            "intouch": "Kontakt aufnehmen"
+            "button": "Kontakt aufnehmen"
         },
         "aboutme": {
             "heading": "WER IST KRISTINA",
@@ -29,7 +29,8 @@
         },
         "testimonials": {
             "heading": "IHRE WORTE",
-            "heading-two": "Gedanken meiner Kolleg:innen"
+            "heading-two": "Gedanken meiner Kolleg:innen",
+            "profile": "Profil"
         },
         "contact": {
             "heading": "KONTAKTIERE MICH",
@@ -40,9 +41,6 @@
             "maillabel": "Wie lautet deine E-Mail-Adresse?",
             "messagelabel": "Wie kann ich dir helfen?",
             "checkboxtext": "Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu."
-        },
-        "footer": {
-            "legalnotice": "Impressum"
         },
         "legal-notice": {
             "title": "Impressum"

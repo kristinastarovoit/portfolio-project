@@ -9,7 +9,7 @@
         "hero": {
             "hello": "Hello world",
             "iam": "I'M KRISTINA STAROVOIT",
-            "intouch": "Get in touch"
+            "button": "Get in touch"
         },
         "aboutme": {
             "heading": "WHO'S KRISTINA",
@@ -29,7 +29,8 @@
         },
         "testimonials": {
             "heading": "IN THEIR WORDS",
-            "heading-two": "Colleagues' Thoughts"
+            "heading-two": "Colleagues' Thoughts",
+            "profile": "Profile"
         },
         "contact": {
             "heading": "CONTACT ME",
@@ -39,10 +40,8 @@
             "namelabel": "What's your name?",
             "maillabel": "What's your email?",
             "messagelabel": "How can I help you?",
-            "checkboxtext": "I've read the privacy policy and agree to the processing of my data as outlined."
-        },
-        "footer": {
-            "legalnotice": "Legal notice"
+            "checkboxtext": "I've read the ",
+            "checkboxtext-two": " privacy policy and agree to the processing of my data as outlined."
         },
         "legal-notice": {
             "title": "Legal notice"

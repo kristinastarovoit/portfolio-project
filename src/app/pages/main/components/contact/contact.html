@@ -1,16 +1,10 @@
 <section class="contact">
     <div class="contact__text-content">
         <div>
-            <h2 class="text-white">CONTACT ME</h2>
-            <h3 class="text-white contact__h3">Ready to work together?</h3>
+            <h2 class="text-white">{{'app.contact.heading' | translate}}</h2>
+            <h3 class="text-white contact__h3">{{'app.contact.heading-two' | translate}}</h3>
         </div>
-        <p class="text-white">I'm currently looking for a remote Frontend or Fullstack Developer position,
-            or a role with a home office option, where I can continue to grow and contribute to meaningful projects.
-            If you're looking for someone who is curious, reliable, eager to learn, and enjoys working collaboratively,
-            I'd love to hear from you. I'm excited to bring my skills, enthusiasm, and commitment to a team while
-            continuously
-            expanding my knowledge and taking on new challenges.
-            Let's build something great together!
+        <p class="text-white">{{'app.contact.text' | translate}}
         </p>
         <img class="contact__arrow" src="/sticker/contact_line.png">
     </div>
@@ -19,22 +13,21 @@
         <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
 
             <div class="contact__input-wrapper">
-                <label class="text-white contact__label" for="name">What's your name?</label>
+                <label class="text-white contact__label" for="name">{{'app.contact.namelabel' | translate}}</label>
                 <input id="name" type="text" formControlName="name">
             </div>
             <div class="contact__input-wrapper">
-                <label class="text-white contact__label" for="mail">What's your email?</label>
+                <label class="text-white contact__label" for="mail">{{'app.contact.maillabel' | translate}}</label>
                 <input id="mail" type="email" formControlName="email">
             </div>
             <div class="contact__input-wrapper">
-                <label class="text-white contact__label" for="message">How can I help you?</label>
+                <label class="text-white contact__label" for="message">{{'app.contact.messagelabel' | translate}}</label>
                 <input id="message" type="text" formControlName="message">
             </div>
             <p class="contact__accept-text text-white">DSVG gelesen</p>
-            <input type="checkbox"><p>Please accept the <a routerLink="privacypolicy">privacy policy</a>.</p>
+            <input type="checkbox"><p>{{'app.contact.checkboxtext' | translate}}<a routerLink="privacypolicy">{{'app.privacy-policy.title' | translate}}</a> {{'app.contact.checkboxtext-two' | translate}}</p>
             <button class="btn btn--white" type="submit" (click)="submitForm()" [disabled]="!contactForm.value">Send</button>
         </form>
-
 
     </div>
 </section>

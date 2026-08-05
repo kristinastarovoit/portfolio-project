@@ -1,12 +1,8 @@
 <section class="projects">
     <div class="projects__section projects__section--description">
-        <h2>MY CRAFT</h2>
-        <h3 class="projects__h3">Projects</h3>
-        <p>Take a look at my projects and see what I've been working on. 
-            Each project has helped me strengthen my problem-solving skills and 
-            deepen my understanding of modern web development. My goal is to create responsive, 
-            intuitive, and user-friendly applications while writing clean, maintainable code. 
-            Every challenge is an opportunity to learn something new and continuously improve my skills.
+        <h2>{{'app.projects.heading' | translate}}</h2>
+        <h3 class="projects__h3">{{'app.projects.heading-two' | translate}}</h3>
+        <p>{{'app.projects.text' | translate}}
         </p>
     </div>
     @for (project of projects(); track project.name) {

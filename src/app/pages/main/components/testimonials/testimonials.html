@@ -1,6 +1,6 @@
 <section class="testimonials">
-    <h2 class="testimonials__h2">IN THEIR WORDS</h2>
-    <h3 class="testimonials__h3">Colleagues' Thoughts</h3>
+    <h2 class="testimonials__h2">{{'app.testimonials.heading' | translate}}</h2>
+    <h3 class="testimonials__h3">{{'app.testimonials.heading-two' | translate}}</h3>
     <div class="testimonials__section-wrapper">
         @for(t of testimonials; track $index) {
         <div class="testimonials__card {{t.className}}">
@@ -12,10 +12,9 @@
                 </div>
                 <div class="testimonials__linkedin-wrapper">
                     <img src="/icons/linkedin_black.png">
-                    <p>Profile</p>
+                    <p>{{'app.testimonials.profile' | translate}}</p>
                 </div>
             </div>
-
         </div>
         }
     </div>

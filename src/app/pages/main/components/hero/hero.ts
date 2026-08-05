@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { MagicButton } from './magic-button/magic-button';
+import { TranslatePipe } from '@ngx-translate/core';
 interface Letter {
   char: string;
   active: boolean;
@@ -7,7 +8,7 @@ interface Letter {
 
 @Component({
   selector: 'app-hero',
-  imports: [MagicButton],
+  imports: [MagicButton, TranslatePipe],
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })
