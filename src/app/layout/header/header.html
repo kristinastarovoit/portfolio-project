@@ -51,9 +51,9 @@
                     [class.nav__active]="currentLanguage() == 'de'">DE</span>
             </li>
             <div class="hero__linkcontent hero__linkcontent--row">
-                <a class="hero__linkcontent-link"><img src="/icons/github.svg"></a>
-                <a class="hero__linkcontent-link"><img src="/icons/linkedin.svg"></a>
-                <a class="hero__linkcontent-link"><img src="/icons/mail.svg"></a>
+                <a href="https://github.com/kristinastarovoit" target="_blank" class="hero__linkcontent-link"><img src="/icons/github.svg"></a>
+                <a href="https://www.linkedin.com/in/kristina-starovoit-6a6672354/" target="_blank" class="hero__linkcontent-link"><img src="/icons/linkedin.svg"></a>
+                <a (click)="scrollService.scrollToSection('contact')" class="hero__linkcontent-link"><img src="/icons/mail.svg"></a>
             </div>
         </ul>
     </div>
