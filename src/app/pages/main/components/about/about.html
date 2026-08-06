@@ -8,6 +8,6 @@
         <h3 class="about-content__h3">{{'app.aboutme.heading-two' | translate}}</h3>
         <p>{{'app.aboutme.text' | translate}}
         </p>
-        <a class="about-content__btn btn btn--black">{{'app.aboutme.button' | translate}}</a>
+        <a (click)="scrollService.scrollToSection('contact')" class="about-content__btn btn btn--black">{{'app.aboutme.button' | translate}}</a>
     </div>
 </section>

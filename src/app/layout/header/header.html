@@ -7,12 +7,12 @@
             </a>
         </li>
         <li class="nav__mobile-icon" (click)="toggleMenu()"><img src="/icons/burgermenu.png"></li>
-        <li class="nav__li nav__li--desktop"><a class="nav__a nav__a--about">{{ 'app.nav.about' | translate }}</a></li>
-        <li class="nav__li nav__li--desktop"><a class="nav__a nav__a--skills" [class.nav__a--skills-de]="currentLanguage() === 'de'">{{ 'app.nav.skills' | translate }}</a>
+        <li class="nav__li nav__li--desktop"><a (click)="scrollService.scrollToSection('about')" class="nav__a nav__a--about">{{ 'app.nav.about' | translate }}</a></li>
+        <li class="nav__li nav__li--desktop"><a (click)="scrollService.scrollToSection('skills')" class="nav__a nav__a--skills" [class.nav__a--skills-de]="currentLanguage() === 'de'">{{ 'app.nav.skills' | translate }}</a>
         </li>
-        <li class="nav__li nav__li--desktop"><a class="nav__a nav__a--projects">{{ 'app.nav.projects' | translate }}</a>
+        <li class="nav__li nav__li--desktop"><a (click)="scrollService.scrollToSection('projects')" class="nav__a nav__a--projects">{{ 'app.nav.projects' | translate }}</a>
         </li>
-        <li class="nav__li nav__li--desktop"><a class="nav__a nav__a--contact">{{ 'app.nav.contact' | translate }}</a>
+        <li class="nav__li nav__li--desktop"><a (click)="scrollService.scrollToSection('contact')" class="nav__a nav__a--contact">{{ 'app.nav.contact' | translate }}</a>
         </li>
 
         <li class="nav__lang-toggle nav__li nav__li--desktop">
@@ -36,10 +36,10 @@
                     <img class="nav__logo nav__logo--yellow" src="/icons/sk_logo_yellow.svg">
                 </a>
             </li>
-            <li class="nav__li"><a class="nav__a nav__a--about">{{ 'app.nav.about' | translate }}</a></li>
-            <li class="nav__li"><a class="nav__a nav__a--skills" [class.nav__a--skills-de]="currentLanguage() === 'de'">{{ 'app.nav.skills' | translate }}</a></li>
-            <li class="nav__li"><a class="nav__a nav__a--projects">{{ 'app.nav.projects' | translate }}</a></li>
-            <li class="nav__li"><a class="nav__a nav__a--contact">{{ 'app.nav.contact' | translate }}</a></li>
+            <li class="nav__li"><a (click)="scrollService.scrollToSection('about')" class="nav__a nav__a--about">{{ 'app.nav.about' | translate }}</a></li>
+            <li class="nav__li"><a (click)="scrollService.scrollToSection('skills')" class="nav__a nav__a--skills" [class.nav__a--skills-de]="currentLanguage() === 'de'">{{ 'app.nav.skills' | translate }}</a></li>
+            <li class="nav__li"><a (click)="scrollService.scrollToSection('projects')" class="nav__a nav__a--projects">{{ 'app.nav.projects' | translate }}</a></li>
+            <li class="nav__li"><a (click)="scrollService.scrollToSection('contact')" class="nav__a nav__a--contact">{{ 'app.nav.contact' | translate }}</a></li>
             <li class="nav__lang-toggle nav__lang-toggle--mobile">
                 <span class="nav__lang-label nav__lang-label" (click)="switchToSetLanguage('en')"
                     [class.nav__active]="currentLanguage() == 'en'">EN</span>

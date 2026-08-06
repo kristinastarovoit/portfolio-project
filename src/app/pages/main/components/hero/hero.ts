@@ -1,6 +1,8 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, inject } from '@angular/core';
 import { MagicButton } from './magic-button/magic-button';
 import { TranslatePipe } from '@ngx-translate/core';
+import {TosectionService} from '../../../../services/tosection.service'
+
 interface Letter {
   char: string;
   active: boolean;
@@ -13,6 +15,7 @@ interface Letter {
   styleUrl: './hero.scss',
 })
 export class Hero {
+  scrollService = inject(TosectionService);
   words = signal<Letter[][]>([
     'Fullstack'.split('').map(char => ({ char, active: false })),
     'DEVELOPER'.split('').map(char => ({ char, active: false })),

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
+import {TosectionService} from '../../../../services/tosection.service'
 
 @Component({
   selector: 'app-about',
@@ -7,4 +8,6 @@ import { TranslatePipe } from '@ngx-translate/core';
   templateUrl: './about.html',
   styleUrl: './about.scss',
 })
-export class About {}
+export class About {
+  scrollService = inject(TosectionService);
+}

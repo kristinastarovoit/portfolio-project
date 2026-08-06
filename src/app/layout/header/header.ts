@@ -1,14 +1,16 @@
 import { Component, inject, Signal } from '@angular/core';
 import { TranslatePipe, TranslateDirective, TranslateService } from "@ngx-translate/core";
+import { TosectionService } from '../../services/tosection.service';
 
 @Component({
   selector: 'app-header',
-  imports: [TranslatePipe, TranslateDirective],
+  imports: [TranslatePipe],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
 export class Header {
   translate = inject(TranslateService);
+  scrollService = inject(TosectionService);
 
   currentLanguage = this.translate.currentLang;
 
@@ -36,5 +38,5 @@ export class Header {
       'menu-open',
       this.isMenuOpen
     );
-  }
+  };
 }
