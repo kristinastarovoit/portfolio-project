@@ -46,7 +46,8 @@
         "errors": {
             "name": "Oops! Dein Name fehlt",
             "email": "Oops! Deine email wird benötigt",
-            "message": "Was wollen wir entwickeln?"
+            "message": "Was wollen wir entwickeln?",
+            "checkbox": "Du musst der Datenschutzerklärung zustimmen"
         },
         "placeholder": {
             "name": "Trag hier deinen Namen ein",

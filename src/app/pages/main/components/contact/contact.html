@@ -48,7 +48,11 @@
                         routerLink="privacypolicy">{{'app.privacy-policy.title' |
                         translate}}</a> {{'app.contact.checkboxtext-two' | translate}}</p>
             </div>
-
+            @if (!checkbox?.valid && (email?.touched || name?.touched || message?.touched)) {
+            <p class="contact__input-message contact__error">
+                {{ 'app.errors.checkbox' | translate }}
+            </p>
+            }
             <button class="btn btn--white contact__sendbutton" type="submit" (click)="submitForm()"
                 [disabled]="isFormInvalid()" [class.contact__disabled]="isFormInvalid()">Send</button>
         </form>

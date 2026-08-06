@@ -46,7 +46,8 @@
         "errors": {
             "name": "Oops! It seems your name is missing",
             "email": "Oops! Your email is required",
-            "message": "What do you need to develop?"
+            "message": "What do you need to develop?",
+            "checkbox": "You need to accept the privacy policy"
         },
         "placeholder": {
             "name": "Your name goes here",
