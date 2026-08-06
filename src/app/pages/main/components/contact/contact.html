@@ -12,7 +12,8 @@
         <img src="/sticker/sticker_round.png">
         <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
             <div class="contact__input-wrapper">
-                <label class="text-white contact__label" for="name" [class.contact__label--error]="nameInvalidTouched()">{{'app.contact.namelabel' | translate}}</label>
+                <label class="text-white contact__label" for="name"
+                    [class.contact__label--error]="nameInvalidTouched()">{{'app.contact.namelabel' | translate}}</label>
                 <input id="name" type="text" formControlName="name"
                     placeholder="{{'app.placeholder.name' | translate}}">
                 @if (nameInvalidTouched()) {
@@ -22,7 +23,9 @@
                 }
             </div>
             <div class="contact__input-wrapper">
-                <label class="text-white contact__label" for="mail" [class.contact__label--error]="emailInvalidTouched()">{{'app.contact.maillabel' | translate}}</label>
+                <label class="text-white contact__label" for="mail"
+                    [class.contact__label--error]="emailInvalidTouched()">{{'app.contact.maillabel' |
+                    translate}}</label>
                 <input id="mail" type="email" formControlName="email"
                     placeholder="{{'app.placeholder.email' | translate }}">
                 @if (emailInvalidTouched()) {
@@ -32,7 +35,8 @@
                 }
             </div>
             <div class="contact__input-wrapper">
-                <label class="text-white contact__label" for="message" [class.contact__label--error]="messageInvalidTouched()">{{'app.contact.messagelabel' |
+                <label class="text-white contact__label" for="message"
+                    [class.contact__label--error]="messageInvalidTouched()">{{'app.contact.messagelabel' |
                     translate}}</label>
                 <input id="message" type="text" formControlName="message"
                     placeholder="{{'app.placeholder.message' | translate }}">
@@ -48,12 +52,13 @@
                 <p class="contact__accept-text text-white">{{'app.contact.checkboxtext' | translate}}<a
                         routerLink="privacypolicy">{{'app.privacy-policy.title' |
                         translate}}</a> {{'app.contact.checkboxtext-two' | translate}}</p>
+                @if (!checkbox?.valid && (email?.valid && name?.valid && message?.valid)) {
+                <p class="contact__input-message contact__error contact__error--policy">
+                    {{ 'app.errors.checkbox' | translate }}
+                </p>
+                }
             </label>
-            @if (!checkbox?.valid && (email?.touched || name?.touched || message?.touched)) {
-            <p class="contact__input-message contact__error contact__error--policy">
-                {{ 'app.errors.checkbox' | translate }}
-            </p>
-            }
+
             <button class="btn btn--white contact__sendbutton" type="submit" (click)="submitForm()"
                 [disabled]="isFormInvalid()" [class.contact__disabled]="isFormInvalid()">Send</button>
         </form>
