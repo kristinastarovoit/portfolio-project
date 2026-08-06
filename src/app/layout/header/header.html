@@ -8,7 +8,7 @@
         </li>
         <li class="nav__mobile-icon" (click)="toggleMenu()"><img src="/icons/burgermenu.png"></li>
         <li class="nav__li nav__li--desktop"><a class="nav__a nav__a--about">{{ 'app.nav.about' | translate }}</a></li>
-        <li class="nav__li nav__li--desktop"><a class="nav__a nav__a--skills">{{ 'app.nav.skills' | translate }}</a>
+        <li class="nav__li nav__li--desktop"><a class="nav__a nav__a--skills" [class.nav__a--skills-de]="currentLanguage() === 'de'">{{ 'app.nav.skills' | translate }}</a>
         </li>
         <li class="nav__li nav__li--desktop"><a class="nav__a nav__a--projects">{{ 'app.nav.projects' | translate }}</a>
         </li>
@@ -37,7 +37,7 @@
                 </a>
             </li>
             <li class="nav__li"><a class="nav__a nav__a--about">{{ 'app.nav.about' | translate }}</a></li>
-            <li class="nav__li"><a class="nav__a nav__a--skills">{{ 'app.nav.skills' | translate }}</a></li>
+            <li class="nav__li"><a class="nav__a nav__a--skills" [class.nav__a--skills-de]="currentLanguage() === 'de'">{{ 'app.nav.skills' | translate }}</a></li>
             <li class="nav__li"><a class="nav__a nav__a--projects">{{ 'app.nav.projects' | translate }}</a></li>
             <li class="nav__li"><a class="nav__a nav__a--contact">{{ 'app.nav.contact' | translate }}</a></li>
             <li class="nav__lang-toggle nav__lang-toggle--mobile">

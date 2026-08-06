@@ -24,6 +24,13 @@
             transform: translate(-50%, -50%);
             animation: circleReveal 5s ease-in-out infinite;
         }
+
+        &--de::after {
+            height: 180%;
+            width: 420%;
+            left: 200%;
+            top: 40%;
+        }
     }
 
     &__paragraph {

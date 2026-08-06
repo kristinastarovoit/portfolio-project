@@ -102,6 +102,13 @@
         &--contact::after {
             background-image: url('/nav/contact_nav.svg');
         }
+
+        &--skills-de::after {
+            width: 200%;
+            height: 200%;
+            top: 45%;
+            left: 100%;
+        }
     }
 
     &__lang-toggle {
@@ -231,7 +238,7 @@
 
         &__mobile {
             .nav__li {
-                margin-bottom: 20px;
+                margin-bottom: 26px;
             }
         }
     }

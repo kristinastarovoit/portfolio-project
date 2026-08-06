@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { PeelSticker } from './peel-sticker/peel-sticker';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skills',
@@ -9,6 +9,10 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrl: './skills.scss',
 })
 export class Skills {
+  translate = inject(TranslateService);
+
+  currentLanguage = this.translate.currentLang;
+
   skills = [
     {
       name: 'HTML',

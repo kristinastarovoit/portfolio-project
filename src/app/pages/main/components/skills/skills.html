@@ -1,7 +1,7 @@
 <section class="skills">
     <div>
         <h2 class="text-white">{{'app.skills.heading' | translate}}</h2>
-        <h3 class="text-white skills__h3">{{'app.skills.heading-two' | translate}}</h3>
+        <h3 class="text-white skills__h3" [class.skills__h3--de]="currentLanguage() === 'de'">{{'app.skills.heading-two' | translate}}</h3>
     </div>
     <div>
         <div class="skills__paragraph">
