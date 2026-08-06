@@ -11,8 +11,8 @@
     gap: 160px;
 
     &__accept-text {
-        margin-top: 40px;
         font-size: 1rem;
+        margin-left: 30px;
 
         a {
             font-size: 1rem;
@@ -36,20 +36,30 @@
         padding: 16px;
         height: 126px;
         border-bottom: 1.2px solid $yellow-accent;
-        border-top: 1px solid transparent;
+        border-top: 1.2px solid transparent;
         position: relative;
         transition: all 255ms ease-in-out;
 
         &:hover {
             border-top: 1.2px solid $blue-accent;
             border-bottom: 1.2px solid $blue-accent;
-            margin-top: -1px;
-            margin-bottom: -1px;
+            margin-top: -1.2px;
+            margin-bottom: -1.2px;
             z-index: 2;
 
             .contact__label {
                 color: $orange-accent;
             }
+        }
+    }
+
+    &__label {
+        display: block;
+        margin: 8px 0;
+        font-size: 1.5rem;
+
+        &--error {
+            color: $error
         }
     }
 
@@ -63,7 +73,6 @@
             flex-direction: column;
         }
 
-        label,
         input {
             display: block;
             margin: 8px 0;
@@ -76,10 +85,6 @@
             color: $white;
             font-family: 'Bricolage Grotesque';
             font-size: 1rem;
-        }
-
-        label {
-            font-size: 1.5rem;
         }
 
         img {
@@ -102,15 +107,59 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        margin-top: 40px;
+        position: relative;
 
         .contact__checkbox {
             height: 24px;
             width: 24px;
+            position: absolute;
+            opacity: 0;
+            height: 0;
+            width: 0;
+
+            &:checked~.contact__checkmark:after {
+                display: block;
+            }
+        }
+    }
+
+    &__checkmark {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: transparent;
+        border: 2px solid $blue-accent;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: $blue-accent--transparent;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 5px;
+            top: 0;
+            width: 5px;
+            height: 10px;
+            border: solid $white;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
         }
     }
 
     &__error {
         color: $error;
+
+        &--policy {
+            margin-top: 6px;
+            margin-left: 30px;
+        }
     }
 
     &__disabled,

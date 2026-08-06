@@ -45,4 +45,16 @@ export class Contact {
   get checkbox() {
     return this.contactForm.get("checkbox");
   };
+
+  nameInvalidTouched() {
+    return !this.name?.valid && this.name?.touched
+  }
+
+  emailInvalidTouched() {
+    return !this.email?.valid && this.email?.touched
+  }
+
+  messageInvalidTouched() {
+    return !this.message?.valid && this.message?.touched
+  }
 }
