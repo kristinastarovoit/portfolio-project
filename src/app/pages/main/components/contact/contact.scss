@@ -20,16 +20,28 @@
         }
     }
 
+    &__send-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 40px;
+        margin-top: 40px;
+    }
+
     &__text-content {
         display: flex;
         flex-direction: column;
         gap: 48px;
     }
 
-    &__arrow {
+    &__arrow--desktop {
         align-self: flex-end;
         clip-path: inset(0 100% 0 0);
         animation: arrow-reveal 5s ease-in-out infinite;
+    }
+
+    &__arrow--mobile {
+        display: none;
     }
 
     &__input-wrapper {
@@ -88,7 +100,7 @@
             font-size: 1rem;
         }
 
-        img {
+        &-sticker {
             height: 166px;
             width: 166px;
             align-self: flex-end;
@@ -98,8 +110,6 @@
         }
 
         button {
-            align-self: flex-end;
-            margin-top: 40px;
             background-color: transparent;
         }
     }
@@ -107,7 +117,6 @@
     &__checkbox-wrapper {
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: flex-start;
         margin-top: 40px;
         position: relative;
@@ -200,9 +209,11 @@
 }
 
 @media screen and (max-width: 1180px) {
-    .contact__form-content {
-        img {
-            top: 0%;
+    .contact {
+        &__form-content {
+            &-sticker {
+                top: 0%;
+            }
         }
     }
 }
@@ -215,12 +226,43 @@
         &__form-content {
             width: 100%;
         }
+
+        &__arrow--desktop {
+            display: none;
+        }
+
+        &__arrow--mobile {
+            display: block;
+            width: 60%;
+            height: 44px;
+            clip-path: inset(0 100% 0 0);
+            animation: arrow-reveal 5s ease-in-out infinite;
+        }
     }
 }
 
 @media screen and (max-width: 768px) {
     .contact {
-        padding-left: 72px;
-        padding-right: 72px;
+        padding-left: 56px;
+        padding-right: 56px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .contact {
+        padding-left: 16px;
+        padding-right: 16px;
+
+        &__form-content-sticker {
+            width: 140px;
+            height: 140px;
+        }
     }
 }

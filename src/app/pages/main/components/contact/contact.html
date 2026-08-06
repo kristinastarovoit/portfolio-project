@@ -6,10 +6,10 @@
         </div>
         <p class="text-white">{{'app.contact.text' | translate}}
         </p>
-        <img class="contact__arrow" src="/sticker/contact_line.png">
+        <img class="contact__arrow--desktop" src="/sticker/contact_line.png">
     </div>
     <div class="contact__form-content">
-        <img src="/sticker/sticker_round.png">
+        <img class="contact__form-content-sticker" src="/sticker/sticker_round.png">
         <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
             <div class="contact__input-wrapper">
                 <label class="text-white contact__label" for="name"
@@ -59,8 +59,11 @@
                 }
             </label>
 
-            <button class="btn btn--white contact__sendbutton" type="submit" (click)="submitForm()"
-                [disabled]="isFormInvalid()" [class.contact__disabled]="isFormInvalid()">Send</button>
+            <div class="contact__send-wrapper">
+                <img class="contact__arrow--mobile" src="/sticker/contact_line.png">
+                <button class="btn btn--white contact__sendbutton" type="submit" (click)="submitForm()"
+                    [disabled]="isFormInvalid()" [class.contact__disabled]="isFormInvalid()">Send</button>
+            </div>
         </form>
     </div>
 </section>
