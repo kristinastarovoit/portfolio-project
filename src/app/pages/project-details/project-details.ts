@@ -3,10 +3,11 @@ import { ProjectsService } from '../../services/projects.service';
 import { Project } from '../../interfaces/project';
 import { Header } from "../../layout/header/header";
 import { Router, RouterLink } from '@angular/router';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-project-details',
-  imports: [Header, RouterLink],
+  imports: [Header, RouterLink, TranslatePipe],
   templateUrl: './project-details.html',
   styleUrl: './project-details.scss',
 })
@@ -14,6 +15,7 @@ export class ProjectDetails {
   projectsService = inject(ProjectsService);
   slug = input.required<string>();
   router = inject(Router);
+  translate = inject(TranslateService);
 
   //gibt das richtige Projekt zurück in abhängigkeit vom slug
 

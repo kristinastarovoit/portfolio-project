@@ -59,6 +59,31 @@
         },
         "privacy-policy": {
             "title": "Datenschutzerklärung"
+        },
+        "project-details": {
+            "back": "Zurück",
+            "description": "Beschreibung",
+            "details": "Details",
+            "duration": "Dauer",
+            "next": "Nächstes Projekt"
+        },
+        "project-details-polloloco": {
+            "name": "El Pollo Loco",
+            "description": "Jump-and-Run-Spiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.",
+            "details": "string",
+            "duration": "3 Wochen"
+        },
+        "project-details-join": {
+            "name": "Join",
+            "description": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag-and-Drop, weise Benutzer und Kategorien zu.",
+            "details": "string",
+            "duration": "3 Wochen"
+        },
+        "project-details-poke": {
+            "name": "PokéDex",
+            "description": "Interaktive Pokédex-App, die dynamische Daten von der PokéAPI abfragt. Durchstöbere Pokémon und sieh dir detaillierte Stats, Typen und Fähigkeiten in einer übersichtlichen Benutzeroberfläche an.",
+            "details": "string",
+            "duration": "1 Woche"
         }
     }
 }

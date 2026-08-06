@@ -51,7 +51,7 @@
         },
         "placeholder": {
             "name": "Your name goes here",
-            "email":"youremail@email.com",
+            "email": "youremail@email.com",
             "message": "Hello Kristina, I am interested in..."
         },
         "legal-notice": {
@@ -59,6 +59,31 @@
         },
         "privacy-policy": {
             "title": "Privacy policy"
+        },
+        "project-details": {
+            "back": "Go back",
+            "description": "Description",
+            "details": "Implementation Details",
+            "duration": "Duration",
+            "next": "Next Project"
+        },
+        "project-details-polloloco": {
+            "name": "El Pollo Loco",
+            "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+            "details": "string",
+            "duration": "3 weeks"
+        },
+        "project-details-join": {
+            "name": "Join",
+            "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+            "details": "string",
+            "duration": "3 weeks"
+        },
+        "project-details-poke": {
+            "name": "PokéDex",
+            "description": "Interactive Pokédex app fetching dynamic data from the PokéAPI. Browse Pokémon, view detailed stats, types, and abilities in a clean, visual interface.",
+            "details": "string",
+            "duration": "1 week"
         }
     }
 }

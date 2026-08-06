@@ -1,18 +1,20 @@
-import { Service, signal } from '@angular/core';
+import { Service, signal, inject } from '@angular/core';
 import { Project } from '../interfaces/project';
+import { TranslateService } from '@ngx-translate/core';
 
 @Service()
 export class ProjectsService {
+    translate = inject(TranslateService);
     projects = signal<Project[]>([
         {
             slug: "join",
-            name: "Join",
-            description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+            name: "app.project-details-join.name",
+            description: "app.project-details-join.description",
             featured: true,
             img: "/img/join.png",
             className: 'projects__img projects__img--float',
-            details: "string",
-            duration: "string",
+            details: "app.project-details-join.details",
+            duration: "app.project-details-join.duration",
             technologies: [{
                 icon: "string",
                 technology: "string"
@@ -22,13 +24,13 @@ export class ProjectsService {
         },
         {
             slug: "pollo-loco",
-            name: "El Pollo Loco",
-            description: "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+            name: "app.project-details-polloloco.name",
+            description: "app.project-details-polloloco.description",
             featured: false,
             img: "/img/elpolloloco.png",
             className: 'projects__img',
-            details: "string",
-            duration: "3 weeks",
+            details: "app.project-details-polloloco.details",
+            duration: "app.project-details-polloloco.duration",
             technologies: [{
                 icon: "/icons/skill_js.png",
                 technology: "JavaScript"
@@ -47,23 +49,23 @@ export class ProjectsService {
         },
         {
             slug: "pokedex",
-            name: "PokéDex",
-            description: "Interactive Pokédex app fetching dynamic data from the PokéAPI. Browse Pokémon, view detailed stats, types, and abilities in a clean, visual interface.",
+            name: "app.project-details-poke.name",
+            description: "app.project-details-poke.description",
             featured: false,
             img: "/img/pokedex.png",
             className: 'projects__img',
-            details: "string",
-            duration: "1 week",
+            details: "app.project-details-poke.details",
+            duration: "app.project-details-poke.duration",
             technologies: [{
                 icon: "/icons/skill_html.png",
                 technology: "HTML"
-            }, 
+            },
             {
                 icon: "/icons/skill_css.png",
                 technology: "CSS"
             }],
             github: "https://github.com/kristinastarovoit/07_pokedex.git",
-            livetest:"https://kristinastarovoit.developerakademie.net/07_pokedex/index.html"
+            livetest: "https://kristinastarovoit.developerakademie.net/07_pokedex/index.html"
         }
     ]);
 

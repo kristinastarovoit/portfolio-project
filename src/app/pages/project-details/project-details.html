@@ -6,19 +6,19 @@ und da sich bei signals ggfalls etwas ändern kann, gibt TS einen error: project
     @if (project(); as p){
     <div class="project-detail__wrapper project-detail__wrapper--info">
         <a [routerLink]="''" class="project-detail__link project-detail__link--back"><img
-                src="/icons/project_arrow_orange.png">Go Back</a>
-        <h3 class="project-detail__h3">{{p.name}}</h3>
+                src="/icons/project_arrow_orange.png">{{'app.project-details.back' | translate}}</a>
+        <h3 class="project-detail__h3">{{p.name | translate}}</h3>
 
         <div class="project-detail__text-wrapper">
-            <h4>Description</h4>
-            <p>{{p.description}}</p>
+            <h4>{{'app.project-details.description' | translate}}</h4>
+            <p>{{p.description  | translate}}</p>
         </div>
         <div class="project-detail__text-wrapper">
-            <h4>Implementation Details</h4>
-            <p>{{p.details}}</p>
+            <h4>{{'app.project-details.details' | translate}}</h4>
+            <p>{{p.details  | translate}}</p>
         </div>
         <div class="project-detail__text-wrapper">
-            <p class="project-detail__d-heading">Duration: <span>{{p.duration}}</span></p>
+            <p class="project-detail__d-heading">{{'app.project-details.duration' | translate}} <span>{{p.duration  | translate}}</span></p>
         </div>
         <div class="project-detail__technologies-wrapper">
             @for (tech of p.technologies; track $index) {
@@ -47,7 +47,7 @@ und da sich bei signals ggfalls etwas ändern kann, gibt TS einen error: project
             <a [href]="p.github" target="_blank" class="btn btn--white">GitHub</a>
             <a [href]="p.livetest" target="_blank" class="btn btn--white">Live Test</a>
         </div>
-        <a (click)="goToNextProject()" class="project-detail__link project-detail__link--next">Next Project <img
+        <a (click)="goToNextProject()" class="project-detail__link project-detail__link--next">{{'app.project-details.next' | translate}} <img
                 src="/icons/project_arrow.png"></a>
     </div>
     }
