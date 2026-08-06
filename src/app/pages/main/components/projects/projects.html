@@ -11,12 +11,12 @@
         <img class="projects__sticker" src="/sticker/featured.png">
         }
         <div class="projects__img-wrapper">
-            <img [class]="project.className" [src]="project.img" [alt]="project.name">
-            <a [routerLink]="['/project-detail', project.slug]" class="btn btn--white projects__button">Project Details</a>
+            <img [class]="project.className" [src]="project.img" [alt]="project.name | translate">
         </div>
+        <a [routerLink]="['/project-detail', project.slug]" class="btn btn--white projects__button">Project Details</a>
         <div>
-            <h4>{{project.name}}</h4>
-            <p>{{project.description}}</p>
+            <h4>{{project.name | translate}}</h4>
+            <p>{{project.description | translate}}</p>
         </div>
     </div>
     }
