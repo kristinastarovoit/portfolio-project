@@ -200,10 +200,24 @@
             background-color: transparent;
             border: none;
             align-self: flex-end;
-        }
 
-        &__logo-desktop {
-            display: none;
+            position: relative;
+            background-color: transparent;
+            padding: 0;
+
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                width: 32px;
+                height: 32px;
+                background: url('/icons/close_click.png') center/contain no-repeat;
+                opacity: 0;
+            }
+
+            &:active::after {
+                opacity: 1;
+            }
         }
 
         &__li {
@@ -223,7 +237,7 @@
             background-size: cover;
             background-position: bottom;
             background-repeat: no-repeat;
-            padding: 50px 50px 80px;
+            padding: 20px 72px 80px;
             position: absolute;
             inset: 0;
             z-index: 5;
@@ -234,12 +248,45 @@
         &__mobile-icon {
             display: block;
             cursor: pointer;
+            position: relative;
+
+
+            &>button {
+                position: relative;
+                background-color: transparent;
+                border: none;
+                padding: 0;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    width: 32px;
+                    height: 32px;
+                    background: url('/icons/burger_click.png') center/contain no-repeat;
+                    opacity: 0;
+                }
+
+                &:active::after {
+                    opacity: 1;
+                }
+            }
         }
 
         &__mobile {
             .nav__li {
                 margin-bottom: 26px;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav {
+        padding: 20px;
+
+        &__mobile--open {
+            padding: 20px 20px 80px;
         }
     }
 }
