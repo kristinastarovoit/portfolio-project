@@ -44,8 +44,8 @@ und da sich bei signals ggfalls etwas ändern kann, gibt TS einen error: project
         <img class="project-detail__sticker" src="/sticker/sticker_round_yellow.png">
         }
         <div class="project-detail__button-wrapper">
-            <a class="btn btn--white">GitHub</a>
-            <a class="btn btn--white">Live Test</a>
+            <a [href]="p.github" target="_blank" class="btn btn--white">GitHub</a>
+            <a [href]="p.livetest" target="_blank" class="btn btn--white">Live Test</a>
         </div>
         <a (click)="goToNextProject()" class="project-detail__link project-detail__link--next">Next Project <img
                 src="/icons/project_arrow.png"></a>

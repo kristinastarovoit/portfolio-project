@@ -7,7 +7,9 @@ export interface Project {
     className: string,
     details: string,
     duration: string,
-    technologies: Technology[]
+    technologies: Technology[],
+    github: string,
+    livetest: string
 }
 export interface Technology {
     icon: string;

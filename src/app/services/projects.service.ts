@@ -16,7 +16,9 @@ export class ProjectsService {
             technologies: [{
                 icon: "string",
                 technology: "string"
-            }]
+            }],
+            github: "",
+            livetest: ""
         },
         {
             slug: "pollo-loco",
@@ -39,7 +41,9 @@ export class ProjectsService {
                 icon: "/icons/skill_css.png",
                 technology: "CSS"
             }
-            ]
+            ],
+            github: "https://github.com/kristinastarovoit/08_polloloco.git",
+            livetest: "https://kristinastarovoit.developerakademie.net/08_polloloco/index.html"
         },
         {
             slug: "pokedex",
@@ -57,7 +61,9 @@ export class ProjectsService {
             {
                 icon: "/icons/skill_css.png",
                 technology: "CSS"
-            }]
+            }],
+            github: "https://github.com/kristinastarovoit/07_pokedex.git",
+            livetest:"https://kristinastarovoit.developerakademie.net/07_pokedex/index.html"
         }
     ]);
 
