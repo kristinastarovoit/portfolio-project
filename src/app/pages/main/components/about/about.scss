@@ -12,6 +12,10 @@
 
     &__img {
         max-width: 560px;
+
+        &--one {
+            transform: translateY(35px);
+        }
     }
 }
 
@@ -95,6 +99,17 @@
 @media screen and (max-width: 480px) {
     .about-imgs__img {
         max-width: 380px;
+    }
+
+    .aboutme {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .about-imgs__img {
+        max-width: 310px;
     }
 
     .aboutme {
