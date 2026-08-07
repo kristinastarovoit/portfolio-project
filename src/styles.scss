@@ -8,4 +8,7 @@
 
 body {
     background-color: $white;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
 }
