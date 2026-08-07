@@ -17,7 +17,7 @@ export class Contact {
     name: ['', [Validators.required, Validators.minLength(3)]],
     email: ['', [Validators.required, emailFormatValidator]],
     message: ['', [Validators.required, Validators.minLength(10)]],
-    checkbox: ['', [Validators.required]]
+    checkbox: [false, [Validators.requiredTrue]]
   });
 
   isFormInvalid() {
