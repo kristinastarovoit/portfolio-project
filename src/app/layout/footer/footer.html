@@ -1,9 +1,11 @@
 <footer class="footer">
-    <a class="footer__logo-switch">
-        <img class="footer__logo footer__logo--blue" src="/icons/sk_logo.svg">
-        <img class="footer__logo footer__logo--yellow" src="/icons/sk_logo_yellow.svg">
-    </a>
-    <p class="footer__copyright text-white">&copy; Kristina Starovoit 2026</p>
+    <div class="footer__copyright-wrapper">
+        <a (click)="scrollService.scrollToSection('hero')" class="footer__logo-switch">
+            <img class="footer__logo footer__logo--blue" src="/icons/sk_logo.svg">
+            <img class="footer__logo footer__logo--yellow" src="/icons/sk_logo_yellow.svg">
+        </a>
+        <p class="footer__copyright text-white">&copy; Kristina Starovoit 2026</p>
+    </div>
     <div class="footer__links">
         <a class="footer__legal-notice" [routerLink]="['legalnotice']">{{'app.legal-notice.title' | translate}}</a>
         <div class="footer__link-wrapper">
@@ -15,7 +17,8 @@
         <div class="footer__link-wrapper">
             <img src="/icons/linkedin.svg" class="footer__icon">
             <div class="footer__single-link-wrapper">
-                <a href="https://www.linkedin.com/in/kristina-starovoit-6a6672354/" target="_blank" class="footer__single-link">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/kristina-starovoit-6a6672354/" target="_blank"
+                    class="footer__single-link">LinkedIn</a>
             </div>
         </div>
         <div class="footer__link-wrapper">
