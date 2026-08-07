@@ -21,7 +21,7 @@
 
     &__word {
         display: flex;
-
+        margin-left: var(--word-offset, 0px);
     }
 
     &__letter {
@@ -158,36 +158,99 @@
 
 @media screen and (max-width: 1440px) {
 
-    .hero__img-switch {
-        right: 10%;
-        top: 0;
-    }
+    .hero {
+        &__img-switch {
+            right: 10%;
+            top: 0;
+        }
 
-    .hero__letter {
-        font-size: 7.5rem;
-    }
+        &__letter {
+            font-size: 7.5rem;
+        }
 
-    .hero__maincontent {
-        gap: 40px;
-        padding-left: 72px;
-        padding-right: 72px;
+        &__maincontent {
+            gap: 40px;
+            padding-left: 72px;
+            padding-right: 72px;
+        }
     }
 }
 
 @media screen and (max-width: 820px) {
+    .hero {
+        &__img-switch {
+            right: 0%;
+            top: 0;
+        }
 
-    .hero__img-switch {
-        right: 0%;
-        top: 0;
+        &__letter {
+            font-size: 6rem;
+        }
     }
+}
 
-    .hero__letter {
-        font-size: 6rem;
+@media screen and (max-width: 768px) {
+    .hero {
+        &__maincontent {
+            padding: 50px 56px 110px;
+        }
+
+        &__linkcontent {
+            padding-left: 56px;
+        }
     }
 }
 
 @media screen and (max-width: 708px) {
     .hero__letter {
         font-size: 5.5rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .hero__letter {
+        font-size: 4.75rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .hero__word {
+        --word-offset: 0px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero {
+        &__maincontent {
+            padding: 50px 20px 110px;
+        }
+
+        &__linkcontent {
+            padding-left: 20px;
+        }
+
+        &__letter {
+            font-size: 4rem;
+        }
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .hero {
+        &__maincontent {
+            padding: 50px 16px 110px;
+        }
+
+        &__linkcontent {
+            padding-left: 16px;
+        }
+
+        &__letter {
+            font-size: 3.25rem;
+        }
+
+        &__img-switch {
+            right: 10%;
+        }
     }
 }
