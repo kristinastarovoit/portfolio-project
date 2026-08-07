@@ -164,6 +164,7 @@
     .footer {
         flex-direction: column-reverse;
         padding: 56px;
+
         &__logo {
             padding: 0;
         }
@@ -184,5 +185,11 @@
             gap: 16px;
             font-size: 1.25rem;
         }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer {
+        padding: 20px;
     }
 }

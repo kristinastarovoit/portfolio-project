@@ -3,12 +3,11 @@
 .action-btn-wrapper {
     position: relative;
     display: inline-block;
-    padding-top: 42px;
     align-self: flex-start;
 
     &__icon {
         position: absolute;
-        top: 0;
+        top: -42px;
         left: 66%;
         opacity: 0;
         pointer-events: none;
