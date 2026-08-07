@@ -1,10 +1,11 @@
 import { Component, inject, Signal } from '@angular/core';
 import { TranslatePipe, TranslateDirective, TranslateService } from "@ngx-translate/core";
 import { TosectionService } from '../../services/tosection.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  imports: [TranslatePipe],
+  imports: [TranslatePipe, RouterLink],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
