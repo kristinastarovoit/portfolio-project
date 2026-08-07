@@ -6,7 +6,13 @@
     background-image: url('/bg/skills.png');
     background-size: cover;
     background-position: bottom;
-    padding: 170px 120px 200px;
+    padding: 170px 120px 250px;
+
+    &__content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     &__h3 {
         position: relative;
@@ -14,12 +20,12 @@
         &::after {
             content: '';
             position: absolute;
-            background-image: url('/icons/skills_line.svg');
+            background-image: url('/sticker/skill_line.png');
             background-size: contain;
             background-repeat: no-repeat;
             height: 120%;
-            width: 150%;
-            left: 58%;
+            width: 120%;
+            left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
             animation: circleReveal 5s ease-in-out infinite;
@@ -27,21 +33,23 @@
 
         &--de::after {
             height: 180%;
-            width: 420%;
-            left: 200%;
-            top: 40%;
+            width: 120%;
+            left: 50%;
+            top: 95%;
         }
     }
 
     &__paragraph {
-        background-image: url('/sticker/skill_sticker.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 660px;
+        width: 640px;
+        border-style: solid;
+        border-width: 20px 0;
+        border-image-source: url('/sticker/skill_sticker.png');
+        border-image-slice: 20 0 20 0 fill;
+        border-image-repeat: round;
+        padding: 20px 24px;
 
         &__text {
-            padding: 30px;
+            padding: 10px;
         }
     }
 
@@ -49,7 +57,7 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        max-width: 680px;
+        max-width: 640px;
         gap: 40px;
         padding-top: 48px;
 
@@ -101,5 +109,133 @@
     .skills {
         padding-left: max(120px, calc(50% - 720px));
         padding-right: max(120px, calc(50% - 720px));
+    }
+}
+
+@media screen and (max-width: 1420px) {
+    .skills {
+        flex-direction: column;
+        align-items: center;
+
+        &__heading-wrapper {
+            align-self: flex-end;
+            padding-right: 120px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .skills {
+
+        &__heading-wrapper {
+            padding-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .skills {
+        padding-left: 72px;
+        padding-right: 72px;
+
+        &__paragraph,
+        &-content {
+            max-width: 560px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .skills {
+        padding-left: 56px;
+        padding-right: 56px;
+
+        &__paragraph,
+        &-content {
+            max-width: 480px;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .skills {
+
+        &__paragraph,
+        &-content {
+            max-width: 420px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .skills {
+        padding-left: 40px;
+        padding-right: 40px;
+
+        &__paragraph,
+        &-content {
+            max-width: 400px;
+        }
+    }
+}
+
+@media screen and (max-width: 481px) {
+    .skills {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        &__h3 {
+            &::after {
+                height: 120%;
+                width: 120%;
+                left: 40%;
+            }
+
+            &--de::after {
+                height: 180%;
+                width: 120%;
+                left: 50%;
+                top: 95%;
+            }
+
+            &-content {
+                gap: 20px;
+            }
+
+            &__paragraph,
+            &-content {
+                max-width: 340px;
+            }
+        }
+
+        &__paragraph,
+        &-content {
+            max-width: 350px;
+        }
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .skills {
+        padding-left: 16px;
+        padding-right: 16px;
+
+        &-content {
+            gap: 30px;
+        }
+
+        &__paragraph,
+        &-content {
+            max-width: 290px;
+        }
+
+        &__h3 {
+            &--de::after {
+                height: 180%;
+                width: 120%;
+                left: 50%;
+                top: 95%;
+            }
+        }
     }
 }

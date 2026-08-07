@@ -1,3 +1,5 @@
+@use 'app/styles/main' as *;
+
 .peel {
     position: relative;
     width: 200px;
@@ -7,6 +9,7 @@
     align-self: flex-end;
     transform: rotate(8deg);
     bottom: -180px;
+    left: -50px;
 
     &__card {
         position: absolute;
@@ -42,5 +45,65 @@
             object-fit: cover;
             pointer-events: none;
         }
+    }
+
+    &__text {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        padding: 20px;
+        text-align: center;
+        color: $white;
+        pointer-events: none;
+    }
+}
+
+@media screen and (max-width: 1420px) {
+    .peel {
+        bottom: 80%;
+        left: 120%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .peel {
+        bottom: 80%;
+        left: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .peel {
+        bottom: 90%;
+        left: 70%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .peel {
+        bottom: 90%;
+        left: 50%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .peel {
+        left: 40%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .peel {
+        left: 30%;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .peel {
+        left: 15%;
     }
 }

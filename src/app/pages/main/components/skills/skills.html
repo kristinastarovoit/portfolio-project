@@ -1,9 +1,9 @@
 <section class="skills">
-    <div>
+    <div class="skills__heading-wrapper">
         <h2 class="text-white">{{'app.skills.heading' | translate}}</h2>
         <h3 class="text-white skills__h3" [class.skills__h3--de]="currentLanguage() === 'de'">{{'app.skills.heading-two' | translate}}</h3>
     </div>
-    <div>
+    <div class="skills__content-wrapper">
         <div class="skills__paragraph">
             <p class="skills__paragraph__text">{{'app.skills.text' | translate}}
             </p>
@@ -17,8 +17,7 @@
                 </div>
                 }
             </div>
-            <app-peel-sticker></app-peel-sticker>
         </div>
     </div>
-    <!-- <app-peel-sticker></app-peel-sticker> -->
+    <app-peel-sticker></app-peel-sticker>
 </section>

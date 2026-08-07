@@ -1,6 +1,10 @@
 <div class="peel">
     <div class="peel__card peel__card--3">
         <img class="peel__card__img" src="/sticker/peelof_final.png">
+        <div class="peel__text">
+            <p>{{'app.skills.sticker' | translate}}</p>
+            <img src="/icons/react.png">
+        </div>
     </div>
     <div class="peel__card peel__card--2" [class.is-peeled]="card2Peeled" (pointerdown)="peelCard2()">
         <img class="peel__card__img" src="/sticker/peelof_transition.png">

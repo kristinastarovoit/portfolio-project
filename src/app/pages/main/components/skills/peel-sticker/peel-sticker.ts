@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-peel-sticker',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './peel-sticker.html',
   styleUrl: './peel-sticker.scss',
 })
 export class PeelSticker {
+  translate = inject(TranslateService);
   card1Peeled = false;
   card2Peeled = false;
 

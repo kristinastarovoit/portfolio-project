@@ -19,8 +19,9 @@
         },
         "skills": {
             "heading": "MEIN TECH-STACK",
-            "heading-two": "Fähigkeiten",
-            "text": "Ich bin überzeugt, dass Lernen niemals aufhört. Ich bin immer offen dafür, neue Technologien zu entdecken, mein Wissen zu erweitern und mich neuen Herausforderungen anzupassen. Kontinuierliche Weiterentwicklung ist das, was mich als Entwicklerin antreibt."
+            "heading-two": "Skills",
+            "text": "Ich bin überzeugt, dass Lernen niemals aufhört. Ich bin immer offen dafür, neue Technologien zu entdecken, mein Wissen zu erweitern und mich neuen Herausforderungen anzupassen. Kontinuierliche Weiterentwicklung ist das, was mich als Entwicklerin antreibt.",
+            "sticker": "Ich bin auch interessiert an:"
         },
         "projects": {
             "heading": "MEINE ARBEIT",
