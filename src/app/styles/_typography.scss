@@ -48,3 +48,9 @@ p {
 .text-white {
     color: $white;
 }
+
+@media screen and (max-width: 390px) {
+    h3 {
+        font-size: 3.25rem;
+    }
+}
