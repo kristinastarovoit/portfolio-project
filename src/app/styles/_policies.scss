@@ -1,0 +1,89 @@
+@use 'app/styles/main' as *;
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    word-break: break-all;
+}
+
+.policies {
+    &__header {
+        background-image: url('/bg/skills.png');
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        padding: 130px 120px;
+    }
+
+    &__p {
+        white-space: pre-line;
+        word-break: break-all;
+        margin-bottom: 32px;
+    }
+
+    &__main {
+        max-width: 900px;
+        padding: 120px;
+    }
+
+    &__link {
+        color: $blue-accent;
+    }
+
+    &__heading {
+        margin-bottom: 12px;
+    }
+
+    &__h2 {
+        word-break: break-all;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .policies {
+
+        &__header,
+        &__main {
+            padding-left: max(120px, calc(50% - 720px));
+            padding-right: max(120px, calc(50% - 720px));
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .policies {
+
+        &__header,
+        &__main {
+            padding-left: 56px;
+            padding-right: 56px;
+        }
+
+        &__heading {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .policies {
+
+        &__header,
+        &__main {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .policies {
+
+        &__header,
+        &__main {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
+}

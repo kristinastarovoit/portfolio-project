@@ -1,31 +1,23 @@
 <app-header></app-header>
 <header class="policies__header">
-    <h2 class="policies__h2">Legal notice</h2>
+    <h2 class="policies__h2">{{ 'app.legal-notice.title' | translate }}</h2>
 </header>
 <main class="policies__main">
-    <h5>imprint</h5>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum repellendus expedita eveniet est incidunt eum
-        dolor.</p>
-    <h5>imprint</h5>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum repellendus expedita eveniet est incidunt eum
-        dolor.</p>
-    <h5>imprint</h5>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum repellendus expedita eveniet est incidunt eum
-        dolor.</p>
-    <h5>imprint</h5>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum repellendus expedita eveniet est incidunt eum
-        dolor.</p>
-    <h5>imprint</h5>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum repellendus expedita eveniet est incidunt eum
-        dolor.</p>
-    <h5>imprint</h5>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum repellendus expedita eveniet est incidunt eum
-        dolor.</p>
-    <h5>imprint</h5>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum repellendus expedita eveniet est incidunt eum
-        dolor.</p>
-    <h5>imprint</h5>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum repellendus expedita eveniet est incidunt eum
-        dolor.</p>
+    <p class="policies__p">Kristina Starovoit<br>
+        Karlsbader Straße 22<br>
+        86169 Augsburg, Bayern</p>
+    <h5 class="policies__heading">{{ 'app.legal-notice.contact.heading' | translate }}</h5>
+    <p class="policies__p">{{ 'app.legal-notice.contact.text' | translate }}</p>
+
+    <h5 class="policies__heading">{{ 'app.legal-notice.editorial.heading' | translate }}</h5>
+    <p class="policies__p">Kristina Starovoit</p>
+
+    <h5 class="policies__heading">{{ 'app.legal-notice.disputeResolution.heading' | translate }}</h5>
+    <p class="policies__p">{{ 'app.legal-notice.disputeResolution.text' | translate }}</p>
+
+    <p class="policies__p">{{ 'app.legal-notice.disputeResolution.sourceLabel' | translate }}
+        <a class="policies__link"
+            href="https://www.e-recht24.de/impressum-generator.html">https://www.e-recht24.de/impressum-generator.html</a>
+    </p>
 </main>
 <app-footer></app-footer>
