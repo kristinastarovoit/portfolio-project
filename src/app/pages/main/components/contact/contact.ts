@@ -24,11 +24,33 @@ export class Contact {
     return this.name?.invalid || this.email?.invalid || this.message?.invalid || this.checkbox?.invalid;
   };
 
-  submitForm() {
-    console.log(this.contactForm.value);
+  async submitForm() {
     this.contactForm.markAllAsTouched();
-    this.contactForm.reset();
-  };
+
+    if (this.isFormInvalid()) {
+      return;
+    }
+
+    try {
+      const response = await fetch('https://kristina-starovoit.de/php_mail.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: this.contactForm.value.name,
+          email: this.contactForm.value.email,
+          message: this.contactForm.value.message,
+          consent: this.contactForm.value.checkbox
+        })
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        this.contactForm.reset();
+      }
+    } catch (err) {
+    }
+  }
 
   get name() {
     return this.contactForm.get("name");
