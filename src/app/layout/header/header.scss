@@ -1,5 +1,4 @@
 @use 'app/styles/main' as *;
-@use 'app/pages/main/components/hero/hero' as*;
 
 .nav {
     background-color: $black;
@@ -9,11 +8,66 @@
         display: none;
     }
 
+    &__linkcontent {
+        align-self: flex-start;
+        gap: 8px;
+        display: flex;
+        flex-direction: column;
+
+        &--row {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+
+        &-link {
+            border: 1px solid $white;
+            border-radius: 50%;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            position: relative;
+            overflow: hidden;
+
+            &>img {
+                height: 32px;
+                width: 32px;
+                display: block;
+                position: relative;
+                z-index: 2;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $blue-accent;
+                border-radius: 50%;
+                transition: bottom 255ms ease;
+                z-index: 1;
+            }
+
+            &:hover {
+                &::before {
+                    bottom: 0;
+                }
+            }
+        }
+    }
+
     &__mobile {
         display: none;
 
         &-ul {
             list-style-type: none;
+            padding-inline-start: 0;
         }
     }
 

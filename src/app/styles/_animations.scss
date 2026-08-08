@@ -1,0 +1,53 @@
+@keyframes arrow-reveal-right {
+    0% {
+        clip-path: inset(0 0 0 100%);
+    }
+
+    30% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    85% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 100%);
+    }
+}
+
+@keyframes arrow-reveal-left {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    30% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    85% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    100% {
+        clip-path: inset(0 100% 0 0);
+    }
+}
+
+@keyframes circleReveal {
+    0% {
+        clip-path: inset(100% 0 0 100%);
+    }
+
+    25% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    90% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    100% {
+        clip-path: inset(100% 0 0 100%);
+    }
+}

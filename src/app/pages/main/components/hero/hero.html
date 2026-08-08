@@ -4,8 +4,8 @@
             <app-magic-button></app-magic-button>
         </div>
         <div class="hero__img-switch">
-            <img class="hero__img-switch--default" src="/sticker/polaroidframe.png">
-            <img class="hero__img-switch--hover" src="/sticker/polaroidframe_color.png">
+            <img class="hero__img-switch--default" src="/img/polaroidframe.png">
+            <img class="hero__img-switch--hover" src="/img/polaroidframe_color.png">
         </div>
         <div class="hero__title">
             @for (word of words(); track $index; let wi = $index) {
@@ -14,8 +14,7 @@
                 <span class="hero__letter" [class.hero__letter--active]="letter.active"
                     (mouseenter)="setActive(letter, true)" (mouseleave)="setActive(letter, false)"
                     (touchstart)="setActive(letter, true)" (touchend)="setActive(letter, false)"
-                    (click)="toggleLetter(word, letter)">{{ displayChar(letter)
-                    }}</span>
+                    (click)="toggleLetter(word, letter)">{{ displayChar(letter)}}</span>
                 }
             </div>
             }

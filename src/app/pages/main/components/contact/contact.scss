@@ -37,7 +37,7 @@
     &__arrow--desktop {
         align-self: flex-end;
         clip-path: inset(0 100% 0 0);
-        animation: arrow-reveal 5s ease-in-out infinite;
+        animation: arrow-reveal-left 5s ease-in-out infinite;
     }
 
     &__arrow--mobile {
@@ -183,24 +183,6 @@
     }
 }
 
-@keyframes arrow-reveal {
-    0% {
-        clip-path: inset(0 100% 0 0);
-    }
-
-    30% {
-        clip-path: inset(0 0 0 0);
-    }
-
-    85% {
-        clip-path: inset(0 0 0 0);
-    }
-
-    100% {
-        clip-path: inset(0 100% 0 0);
-    }
-}
-
 @media screen and (min-width: 1440px) {
     .contact {
         padding-left: max(120px, calc(50% - 720px));
@@ -236,7 +218,7 @@
             width: 60%;
             height: 44px;
             clip-path: inset(0 100% 0 0);
-            animation: arrow-reveal 5s ease-in-out infinite;
+            animation: arrow-reveal-left 5s ease-in-out infinite;
         }
     }
 }
