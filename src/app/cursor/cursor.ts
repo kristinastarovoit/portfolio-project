@@ -36,7 +36,6 @@ export class Cursor implements AfterViewInit, OnDestroy {
   constructor(private elementRef: ElementRef<HTMLElement>) { }
 
   ngAfterViewInit(): void {
-    // Auf Touch-Geräten gibt es keinen echten Mauszeiger
     if (!window.matchMedia('(pointer: fine)').matches) {
       return;
     }
@@ -60,18 +59,15 @@ export class Cursor implements AfterViewInit, OnDestroy {
       return;
     }
 
-    // Punkt folgt der Maus sofort
     this.cursorDot.style.transform =
       `translate(${this.mouseX}px, ${this.mouseY}px) translate(-50%, -50%)`;
 
-    // Äußerer Kreis folgt verzögert (Lerp)
     this.outlineX += (this.mouseX - this.outlineX) * 0.12;
     this.outlineY += (this.mouseY - this.outlineY) * 0.12;
 
     this.cursorOutline.style.transform =
       `translate(${this.outlineX}px, ${this.outlineY}px) translate(-50%, -50%)`;
 
-    // Hit-Test einmal pro Frame statt bei jedem einzelnen pointermove
     this.updateCursorType();
 
     this.animationFrame = requestAnimationFrame(() => this.animate());
