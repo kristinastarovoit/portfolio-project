@@ -1,5 +1,9 @@
 @use 'app/styles/main' as *;
 
+* {
+    cursor: none !important;
+}
+
 .project-detail {
     background-color: $black;
     background-image: url('/bg/notebook_paper.png');

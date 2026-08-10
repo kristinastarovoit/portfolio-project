@@ -1,6 +1,4 @@
-<!-- as p merkt sich projects() und kann so weiterhin im if block genutzt werden.
-TS weiß nicht, dass das project() in der if Bedingung dasselbe ist, wie im if block. U
-und da sich bei signals ggfalls etwas ändern kann, gibt TS einen error: projects().name : object is possibly undefined -->
+<app-cursor></app-cursor>
 <app-header></app-header>
 <section class="project-detail">
     @if (project(); as p){
@@ -11,14 +9,15 @@ und da sich bei signals ggfalls etwas ändern kann, gibt TS einen error: project
 
         <div class="project-detail__text-wrapper">
             <h4>{{'app.project-details.description' | translate}}</h4>
-            <p>{{p.description  | translate}}</p>
+            <p>{{p.description | translate}}</p>
         </div>
         <div class="project-detail__text-wrapper">
             <h4>{{'app.project-details.details' | translate}}</h4>
-            <p>{{p.details  | translate}}</p>
+            <p>{{p.details | translate}}</p>
         </div>
         <div class="project-detail__text-wrapper">
-            <p class="project-detail__d-heading">{{'app.project-details.duration' | translate}} <span>{{p.duration  | translate}}</span></p>
+            <p class="project-detail__d-heading">{{'app.project-details.duration' | translate}} <span>{{p.duration |
+                    translate}}</span></p>
         </div>
         <div class="project-detail__technologies-wrapper">
             @for (tech of p.technologies; track $index) {
@@ -47,7 +46,8 @@ und da sich bei signals ggfalls etwas ändern kann, gibt TS einen error: project
             <a [href]="p.github" target="_blank" class="btn btn--white">GitHub</a>
             <a [href]="p.livetest" target="_blank" class="btn btn--white">Live Test</a>
         </div>
-        <a (click)="goToNextProject()" class="project-detail__link project-detail__link--next">{{'app.project-details.next' | translate}} <img
+        <a (click)="goToNextProject()"
+            class="project-detail__link project-detail__link--next">{{'app.project-details.next' | translate}} <img
                 src="/icons/project_arrow.png"></a>
     </div>
     }

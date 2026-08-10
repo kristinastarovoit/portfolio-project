@@ -7,10 +7,11 @@ import { Testimonials } from "../components/testimonials/testimonials";
 import { Contact } from "../components/contact/contact";
 import { Footer } from "../../../layout/footer/footer";
 import { Hero } from "../components/hero/hero";
+import { Cursor } from '../../../cursor/cursor';
 
 @Component({
   selector: 'app-main-page',
-  imports: [Header, About, Skills, Projects, Testimonials, Contact, Footer, Hero],
+  imports: [Header, About, Skills, Projects, Testimonials, Contact, Footer, Hero, Cursor],
   templateUrl: './main-page.html',
   styleUrl: './main-page.scss',
 })

@@ -4,10 +4,11 @@ import { Project } from '../../interfaces/project';
 import { Header } from "../../layout/header/header";
 import { Router, RouterLink } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { Cursor } from '../../cursor/cursor';
 
 @Component({
   selector: 'app-project-details',
-  imports: [Header, RouterLink, TranslatePipe],
+  imports: [Header, RouterLink, TranslatePipe, Cursor],
   templateUrl: './project-details.html',
   styleUrl: './project-details.scss',
 })

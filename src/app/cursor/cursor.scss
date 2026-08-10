@@ -1,0 +1,61 @@
+@use 'app/styles/main' as *;
+
+.custom-cursor {
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+    z-index: 10;
+}
+
+.cursor-dot {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 10px;
+    height: 10px;
+
+    background: $blue-accent;
+    border-radius: 50%;
+}
+
+.cursor-outline {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 32px;
+    height: 32px;
+
+    border: 2px solid $yellow-accent;
+    border-radius: 50%;
+
+    transition:
+        width 0.2s ease,
+        height 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.custom-cursor.pointer .cursor-outline {
+    width: 40px;
+    height: 40px;
+
+    border-color: $blue-accent;
+}
+
+.custom-cursor.grab .cursor-outline {
+    width: 42px;
+    height: 42px;
+
+    border-color: $orange-accent;
+}
+
+.custom-cursor.grabbing .cursor-outline {
+    width: 28px;
+    height: 28px;
+
+    border-color: $orange-accent;
+}
