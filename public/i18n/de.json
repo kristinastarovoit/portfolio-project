@@ -42,7 +42,8 @@
             "maillabel": "Wie lautet deine E-Mail?",
             "messagelabel": "Wie kann ich dir helfen?",
             "checkboxtext": "Ich habe die ",
-            "checkboxtext-two": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu."
+            "checkboxtext-two": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+            "submit": "Danke für deine Nachricht!"
         },
         "errors": {
             "name": "Oops! Dein Name fehlt",

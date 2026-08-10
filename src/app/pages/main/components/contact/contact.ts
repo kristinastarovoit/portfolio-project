@@ -12,7 +12,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 })
 export class Contact {
   fb = inject(FormBuilder);
-
+  submitSent = false;
   contactForm = this.fb.group({
     name: ['', [Validators.required, Validators.minLength(3)]],
     email: ['', [Validators.required, emailFormatValidator]],
@@ -47,6 +47,7 @@ export class Contact {
 
       if (result.success) {
         this.contactForm.reset();
+        this.submitSent = true;
       }
     } catch (err) {
     }

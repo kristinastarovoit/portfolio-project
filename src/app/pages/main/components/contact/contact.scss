@@ -18,6 +18,11 @@
             font-size: 1rem;
             color: $blue-accent;
         }
+
+        &--submit {
+            color: $yellow-accent;
+            margin-top: 6px;
+        }
     }
 
     &__send-wrapper {
@@ -46,7 +51,7 @@
 
     &__input-wrapper {
         padding: 16px;
-        height: 126px;
+        height: 128px;
         border-bottom: 1.2px solid $yellow-accent;
         border-top: 1.2px solid transparent;
         position: relative;
@@ -88,10 +93,6 @@
         input {
             display: block;
             margin: 8px 0;
-            background-color: transparent;
-        }
-
-        input {
             background-color: transparent;
             border: none;
             width: 100%;

@@ -42,7 +42,8 @@
             "maillabel": "What's your email?",
             "messagelabel": "How can I help you?",
             "checkboxtext": "I've read the ",
-            "checkboxtext-two": " and agree to the processing of my data as outlined."
+            "checkboxtext-two": " and agree to the processing of my data as outlined.",
+            "submit": "Thank you for your message!"
         },
         "errors": {
             "name": "Oops! It seems your name is missing",

@@ -57,12 +57,16 @@
                     {{ 'app.errors.checkbox' | translate }}
                 </p>
                 }
+                @if (submitSent) {
+                <p class="contact__accept-text--submit">
+                    {{ 'app.contact.submit' | translate }}
+                </p>
+                }
             </label>
-
             <div class="contact__send-wrapper">
                 <img class="contact__arrow--mobile" src="/sticker/contact_line.png">
-                <button class="btn btn--white contact__sendbutton" type="submit" 
-                    [disabled]="isFormInvalid()" [class.contact__disabled]="isFormInvalid()">Send</button>
+                <button class="btn btn--white contact__sendbutton" type="submit" [disabled]="isFormInvalid()"
+                    [class.contact__disabled]="isFormInvalid()">Send</button>
             </div>
         </form>
     </div>
