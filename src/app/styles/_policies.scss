@@ -1,5 +1,11 @@
 @use 'app/styles/main' as *;
 
+:host {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -26,6 +32,7 @@ body {
     &__main {
         width: 100%;
         padding: 120px;
+        flex: 1;
     }
 
     &__link {
