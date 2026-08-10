@@ -101,6 +101,17 @@
             font-size: 1rem;
         }
 
+
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:active {
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: $white !important;
+            background-color: transparent !important;
+        }
+    
+
         &-sticker {
             height: 166px;
             width: 166px;

@@ -12,10 +12,10 @@
         <img class="contact__form-content-sticker" src="/sticker/sticker_round.png">
         <form [formGroup]="contactForm" (ngSubmit)="submitForm()" autocomplete="off">
             <div class="contact__input-wrapper">
-                <label class="text-white contact__label" for="name"
+                <label class="text-white contact__label" for="contact-identifier"
                     [class.contact__label--error]="nameInvalidTouched()">{{'app.contact.namelabel' | translate}}</label>
-                <input id="name" type="text" formControlName="name"
-                    placeholder="{{'app.placeholder.name' | translate}}">
+                <input autocomplete="off" id="contact-identifier" name="contact-identifier" type="text"
+                    formControlName="name" placeholder="{{'app.placeholder.name' | translate}}">
                 @if (nameInvalidTouched()) {
                 <span class="contact__input-message contact__error">
                     {{ 'app.errors.name' | translate }}
@@ -23,11 +23,11 @@
                 }
             </div>
             <div class="contact__input-wrapper">
-                <label class="text-white contact__label" for="mail"
+                <label class="text-white contact__label" for="contact-reply-to"
                     [class.contact__label--error]="emailInvalidTouched()">{{'app.contact.maillabel' |
                     translate}}</label>
-                <input id="mail" type="email" formControlName="email"
-                    placeholder="{{'app.placeholder.email' | translate }}">
+                <input autocomplete="new-password" id="contact-reply-to" name="contact-reply-to" type="email"
+                    formControlName="email" placeholder="{{'app.placeholder.email' | translate }}">
                 @if (emailInvalidTouched()) {
                 <span class="contact__input-message contact__error">
                     {{ 'app.errors.email' | translate }}
@@ -35,10 +35,10 @@
                 }
             </div>
             <div class="contact__input-wrapper">
-                <label class="text-white contact__label" for="message"
+                <label class="text-white contact__label" for="contact-note"
                     [class.contact__label--error]="messageInvalidTouched()">{{'app.contact.messagelabel' |
                     translate}}</label>
-                <input id="message" type="text" formControlName="message"
+                <input autocomplete="off" id="contact-note" name="contact-note" type="text" formControlName="message"
                     placeholder="{{'app.placeholder.message' | translate }}">
                 @if (messageInvalidTouched()) {
                 <span class="contact__input-message contact__error">
@@ -49,8 +49,8 @@
             <label class="contact__checkbox-wrapper">
                 <input class="contact__checkbox" type="checkbox" formControlName="checkbox">
                 <span class="contact__checkmark"></span>
-                <p class="contact__accept-text text-white">{{'app.contact.checkboxtext' | translate}}<a
-                        routerLink="privacypolicy">{{'app.privacy-policy.title' |
+                <p class="contact__accept-text text-white">{{'app.contact.checkboxtext' | translate}}
+                    <a routerLink="privacypolicy">{{'app.privacy-policy.title' |
                         translate}}</a> {{'app.contact.checkboxtext-two' | translate}}</p>
                 @if (!checkbox?.valid && checkbox?.dirty) {
                 <p class="contact__input-message contact__error contact__error--policy">
