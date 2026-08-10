@@ -10,7 +10,7 @@
     </div>
     <div class="contact__form-content">
         <img class="contact__form-content-sticker" src="/sticker/sticker_round.png">
-        <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+        <form [formGroup]="contactForm" (ngSubmit)="submitForm()" autocomplete="off">
             <div class="contact__input-wrapper">
                 <label class="text-white contact__label" for="name"
                     [class.contact__label--error]="nameInvalidTouched()">{{'app.contact.namelabel' | translate}}</label>
