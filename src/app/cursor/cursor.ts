@@ -24,7 +24,11 @@ export class Cursor implements AfterViewInit, OnDestroy {
 
   protected readonly cursorType = signal<CursorType>('default');
 
-  private readonly onMouseMove = (event: MouseEvent): void => {
+  private readonly onPointerMove = (event: PointerEvent): void => {
+    if (event.pointerType !== 'mouse') {
+      return;
+    }
+
     this.mouseX = event.clientX;
     this.mouseY = event.clientY;
   };
@@ -32,6 +36,7 @@ export class Cursor implements AfterViewInit, OnDestroy {
   constructor(private elementRef: ElementRef<HTMLElement>) { }
 
   ngAfterViewInit(): void {
+    // Auf Touch-Geräten gibt es keinen echten Mauszeiger
     if (!window.matchMedia('(pointer: fine)').matches) {
       return;
     }
@@ -46,7 +51,7 @@ export class Cursor implements AfterViewInit, OnDestroy {
 
     this.isActive = true;
 
-    document.addEventListener('mousemove', this.onMouseMove, { passive: true });
+    document.addEventListener('pointermove', this.onPointerMove, { passive: true });
     this.animate();
   }
 
@@ -55,15 +60,18 @@ export class Cursor implements AfterViewInit, OnDestroy {
       return;
     }
 
+    // Punkt folgt der Maus sofort
     this.cursorDot.style.transform =
       `translate(${this.mouseX}px, ${this.mouseY}px) translate(-50%, -50%)`;
 
+    // Äußerer Kreis folgt verzögert (Lerp)
     this.outlineX += (this.mouseX - this.outlineX) * 0.12;
     this.outlineY += (this.mouseY - this.outlineY) * 0.12;
 
     this.cursorOutline.style.transform =
       `translate(${this.outlineX}px, ${this.outlineY}px) translate(-50%, -50%)`;
 
+    // Hit-Test einmal pro Frame statt bei jedem einzelnen pointermove
     this.updateCursorType();
 
     this.animationFrame = requestAnimationFrame(() => this.animate());
@@ -88,6 +96,7 @@ export class Cursor implements AfterViewInit, OnDestroy {
     if (this.animationFrame !== undefined) {
       cancelAnimationFrame(this.animationFrame);
     }
-    document.removeEventListener('mousemove', this.onMouseMove);
+
+    document.removeEventListener('pointermove', this.onPointerMove);
   }
 }

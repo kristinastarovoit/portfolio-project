@@ -6,6 +6,11 @@
 
     pointer-events: none;
     z-index: 10;
+
+    @media (hover: none),
+    (pointer: coarse) {
+        display: none;
+    }
 }
 
 .cursor-dot {
