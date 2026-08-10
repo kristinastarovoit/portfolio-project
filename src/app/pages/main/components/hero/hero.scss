@@ -10,8 +10,11 @@
     flex-direction: column;
     justify-content: center;
 
-    &__magic-button {
-        align-self: flex-start;
+    &__title-block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
     }
 
     &__title {
@@ -46,13 +49,14 @@
         align-items: center;
         width: 100%;
         padding: 50px 200px 110px;
+        padding: 50px 200px 110px 250px;
     }
 
     &__img-switch {
         position: relative;
         align-self: flex-end;
         rotate: 8deg;
-        top: 100px;
+        top: 180px;
         right: 70px;
 
         &--hover {
@@ -154,6 +158,10 @@
         &__linkcontent {
             padding-left: max(75px, calc(50% - 720px));
         }
+
+        &__img-switch {
+            right: 10%;
+        }
     }
 }
 
@@ -162,7 +170,7 @@
     .hero {
         &__img-switch {
             right: 10%;
-            top: 0;
+            top: 120px;
         }
 
         &__letter {
@@ -181,7 +189,7 @@
     .hero {
         &__img-switch {
             right: 0%;
-            top: 0;
+            top: 100px;
         }
 
         &__letter {
@@ -215,8 +223,22 @@
 }
 
 @media screen and (max-width: 576px) {
-    .hero__word {
-        --word-offset: 0px !important;
+    .hero {
+        &__word {
+            --word-offset: 0px !important;
+        }
+
+        &__img-switch {
+            top: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .hero {
+        &__img-switch {
+            top: 0;
+        }
     }
 }
 
@@ -252,6 +274,7 @@
 
         &__img-switch {
             right: 10%;
+            top: -10px;
         }
     }
 }
