@@ -5,6 +5,7 @@ import { Header } from "../../layout/header/header";
 import { Router, RouterLink } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Cursor } from '../../cursor/cursor';
+import { TosectionService } from '../../services/tosection.service';
 
 @Component({
   selector: 'app-project-details',
@@ -17,8 +18,7 @@ export class ProjectDetails {
   slug = input.required<string>();
   router = inject(Router);
   translate = inject(TranslateService);
-
-  //gibt das richtige Projekt zurück in abhängigkeit vom slug
+  scrollService = inject(TosectionService);
 
   project(): Project | undefined {
     return this.projectsService.getBySlug(this.slug());
