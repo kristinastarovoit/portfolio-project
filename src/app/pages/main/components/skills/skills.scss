@@ -1,6 +1,6 @@
 .skills {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 48px;
     flex-wrap: wrap;
     background-image: url('/bg/skills.png');
@@ -101,7 +101,6 @@
 
         &__heading-wrapper {
             align-self: flex-end;
-            padding-right: 120px;
         }
     }
 }
