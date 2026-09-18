@@ -148,19 +148,19 @@
         "project-details-polloloco": {
             "name": "El Pollo Loco",
             "description": "Jump-and-Run-Spiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.",
-            "details": "Infos folgen...",
+            "details": "Entwickelt mit JavaScript unter Verwendung eines objektorientierten Programmieransatzes. Das Spiel beinhaltet Spielersteuerung und Bewegung, Kollisionsabfragen, Sammelobjekte wie Münzen und Tabasco-Salsa, Gegner sowie Spiellogik für den Levelverlauf und den Kampf gegen den Endgegner. Der Fokus lag auf der Umsetzung von objektorientierter Programmierung, Spiellogik und interaktiven Spielelementen.",
             "duration": "3 Wochen"
         },
         "project-details-join": {
             "name": "Join",
             "description": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag-and-Drop, weise Benutzer und Kategorien zu.",
-            "details": "Infos folgen...",
-            "duration": "3 Wochen"
+            "details": "Gruppenprojekt zur Entwicklung einer webbasierten Kanban-Anwendung. Mein Schwerpunkt lag auf der Backend- und Frontendentwicklung für Login und Authentifizierung sowie auf der Logik für das Board und Add Task. Außerdem war ich an zentralen Funktionen zur Verwaltung und Organisation von Aufgaben beteiligt.",
+            "duration": "4 Wochen"
         },
         "project-details-poke": {
             "name": "PokéDex",
             "description": "Interaktive Pokédex-App, die dynamische Daten von der PokéAPI abfragt. Durchstöbere Pokémon und sieh dir detaillierte Stats, Typen und Fähigkeiten in einer übersichtlichen Benutzeroberfläche an.",
-            "details": "Infos folgen...",
+            "details": "Entwickelt mit JavaScript und der PokéAPI. Die Anwendung ermöglicht die Suche und Anzeige von Pokémon mit dynamisch abgerufenen Daten wie Stats, Typen und Fähigkeiten. Zusätzlich wurde die API-Anbindung zur Verarbeitung und Darstellung der Pokémon-Daten in einer interaktiven Benutzeroberfläche umgesetzt.",
             "duration": "1 Woche"
         }
     }

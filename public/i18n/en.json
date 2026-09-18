@@ -148,19 +148,19 @@
         "project-details-polloloco": {
             "name": "El Pollo Loco",
             "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
-            "details": "coming soon",
+            "details": "Developed with JavaScript using an object-oriented programming approach. The game includes player movement and controls, collision detection, collectibles such as coins and Tabasco-Salsa, enemies, and game logic for progressing through the level and fighting the final enemy. The project focused on applying object-oriented concepts, game mechanics, and interactive DOM/canvas-based elements.",
             "duration": "3 weeks"
         },
         "project-details-join": {
             "name": "Join",
             "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-            "details": "coming soon",
-            "duration": "3 weeks"
+            "details": "Group project focused on developing a web-based Kanban application. My contribution included the backend and frontend development for login and authentication, as well as the backend logic for the board and Add Task. I was also involved in implementing key features for the management and organization of tasks.",
+            "duration": "4 weeks"
         },
         "project-details-poke": {
             "name": "PokéDex",
             "description": "Interactive Pokédex app fetching dynamic data from the PokéAPI. Browse Pokémon, view detailed stats, types, and abilities in a clean, visual interface.",
-            "details": "coming soon",
+            "details": "Developed with JavaScript and the PokéAPI. The application allows users to search for and display Pokémon with dynamically retrieved data such as stats, types, and abilities. The API integration handles the retrieval and processing of Pokémon data and displays it through an interactive user interface.",
             "duration": "1 week"
         }
     }

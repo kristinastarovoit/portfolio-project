@@ -15,12 +15,34 @@ export class ProjectsService {
             className: 'projects__img projects__img--float',
             details: "app.project-details-join.details",
             duration: "app.project-details-join.duration",
-            technologies: [{
-                icon: "string",
-                technology: "string"
-            }],
-            github: "",
-            livetest: ""
+            technologies: [
+                {
+                    icon: "/icons/skill_supabase.png",
+                    technology: "Supabase"
+                }, 
+                {
+                    icon: "/icons/skill_angular.png",
+                    technology: "Angular"
+                },
+                {
+                    icon: "/icons/skill_ts.png",
+                    technology: "TypeScript"
+                },
+                {
+                    icon: "/icons/skill_html.png",
+                    technology: "HTML"
+                },
+                {
+                    icon: "/icons/skill_sass.svg",
+                    technology: "SCSS"
+                },
+                {
+                    icon: "/icons/skill_git.png",
+                    technology: "Git"
+                },
+            ],
+            github: "https://github.com/kristinastarovoit/Join",
+            livetest: "https://join.kristina-starovoit.de/"
         },
         {
             slug: "pollo-loco",
