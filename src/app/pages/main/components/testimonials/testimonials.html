@@ -4,7 +4,7 @@
     <div class="testimonials__section-wrapper">
         @for(t of testimonials; track $index) {
         <div class="testimonials__card {{t.className}}">
-            <p>{{t.text}}</p>
+            <p>{{t.text | translate}}</p>
             <div class="testimonials__subline-wrapper">
                 <div class="testimonials__name-wrapper">
                     <p class="testimonials__name">{{t.name}}</p>
@@ -12,7 +12,7 @@
                 </div>
                 <div class="testimonials__linkedin-wrapper">
                     <img src="/icons/linkedin_black.png">
-                    <p>{{'app.testimonials.profile' | translate}}</p>
+                    <a [href]="t.github"><p>{{'app.testimonials.profile' | translate}}</p></a>
                 </div>
             </div>
         </div>

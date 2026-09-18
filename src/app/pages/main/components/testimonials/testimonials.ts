@@ -10,22 +10,18 @@ import { TranslatePipe } from '@ngx-translate/core';
 export class Testimonials {
   testimonials = [
     {
-      text: "Kristina ist so cool",
-      name: "Max Mustermann",
-      position: "Frontend Dev",
-      className: "testimonials__card--one"
+      text: "app.testimonials.tobias",
+      name: "Tobias Illner",
+      position: "Fullstack Dev",
+      className: "testimonials__card--one",
+      github: "https://github.com/TobiasIllnerDev"
     },
     {
-      text: "Kristina ist so toll",
-      name: "Peter Hans",
-      position: "Frontend Dev",
-      className: "testimonials__card--two"
-    },
-    {
-      text: "Kristina ist so gut gebräunt und gutaussehend",
-      name: "Michael Jackson",
-      position: "Legende",
-      className: "testimonials__card--three"
+      text: "app.testimonials.anne",
+      name: "Anne Manthey",
+      position: "Fullstack Dev",
+      className: "testimonials__card--two",
+      github: "https://github.com/AnneManthey"
     }
   ]
 }

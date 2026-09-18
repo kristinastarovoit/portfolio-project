@@ -31,8 +31,9 @@
         "testimonials": {
             "heading": "IHRE WORTE",
             "heading-two": "Gedanken meiner Kolleg:innen",
-            "profile": "Profil"
-        },
+            "profile": "Profil",
+            "tobias": "Kristina war sehr kommunikativ und äußerst organisiert. Sie stellte immer sicher, dass alles reibungslos lief. Besonders beeindruckend war ihre positive Einstellung – sie brachte alle zum Lachen und war immer hilfsbereit. Die Zusammenarbeit mit ihr war wirklich angenehm und bereichernd.",
+            "anne": "Die Zusammenarbeit mit Kristina an unserem Projekt (Join Kanban Board) hat hervorragend funktioniert. Sie hat die Gabe, Aufgaben schnell zu erfassen, zu strukturieren und lösungsorientiert umzusetzen, und das immer pünktlich vor der Deadline. Ihr Code ist ausgesprochen sauber und verständlich, und wann immer Fehler auftauchten, war sie direkt zur Stelle, um sie zu finden und das Team zu unterstützen. Sie kommuniziert hervorragend, gibt großartiges Feedback und nimmt dieses ebenso offen an. Ich würde jederzeit gerne wieder mit ihr an künftigen Projekten zusammenarbeiten!"        },
         "contact": {
             "heading": "KONTAKTIERE MICH",
             "heading-two": "Bereit für eine Collab?",
